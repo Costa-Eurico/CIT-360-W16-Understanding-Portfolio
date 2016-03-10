@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping">
+<hibernate-mapping>
+ <class name="com.mpfinder.model.Note" table="note">
+  <id column="note_record_id" name="NoteRecordId" type="int">
+   <generator class="increment"/>
+  </id>
+  <property column="person_record_id" generated="never" lazy="false"
+   name="PersonRecordId" type="int"/>
+  <property column="linked_person_record_id" generated="never"
+   lazy="false" name="LinkedPersonRecordId" type="int"/>
+  <property column="entry_date" generated="never" lazy="false"
+   name="EntryDate" type="date"/>
+  <property column="author_name" generated="never" lazy="false"
+   name="AuthorName" type="string"/>
+  <property column="author_email" generated="never" lazy="false"
+   name="AuthorEmail" type="string"/>
+  <property column="author_phone" generated="never" lazy="false"
+   name="AuthorPhone" type="string"/>
+  <property column="source_data" generated="never" lazy="false"
+   name="SourceData" type="string"/>
+  <property column="author_made_contact" generated="never" lazy="false"
+   name="AuthorMadeContact" type="boolean"/>
+  <property column="status" generated="never" lazy="false" name="Status" type="string"/>
+  <property column="email_of_found_person" generated="never"
+   lazy="false" name="EmailOfFoundPerson" type="string"/>
+  <property column="phone_of_found_person" generated="never"
+   lazy="false" name="PhoneOfFoundPerson" type="string"/>
+  <property column="last_known_location" generated="never" lazy="false"
+   name="LastKnownLocation" type="string"/>
+  <property column="text" generated="never" lazy="false" name="Text" type="text"/>
+  <property column="photo_url" generated="never" lazy="false"
+   name="PhotoUrl" type="string"/>
+ </class>
+</hibernate-mapping>
