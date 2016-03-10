@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
                                    "http://www.hibernate.org/dtd/hibernate-mapping">
 <hibernate-mapping>
- <class name="com.mpfinder.model.Person" table="person">
+ <class entity-name="com.cit360.mpfinder.model.Person" name="com.cit360.mpfinder.model.Person" table="person">
   <id column="person_record_id" name="PersonRecordId" type="int">
    <generator class="increment"/>
   </id>

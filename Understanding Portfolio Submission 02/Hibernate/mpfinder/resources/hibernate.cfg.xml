@@ -4,16 +4,16 @@
 <hibernate-configuration>
  <session-factory>
   <property name="hbm2ddl.auto">update</property>
-  <property name="connection.url">jdbc:mysql://107.180.3.103:3306/mpfinder</property>
-  <property name="connection.username">mpfinderapp-rw</property>
-  <property name="connection.password">c#D$7RyuwaO</property>
-  <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
   <property name="hibernate.show_sql">true</property>
   <property name="hibernate.use_sql_comments">true</property>
   <property name="hibernate.format_sql">true</property>
   <property name="hibernate.default_entity_mode">pojo</property>
   <property name="hibernate.default_schema">mpfinder</property>
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="hibernate.connection.url">jdbc:mysql://107.180.3.103:3306/mpfinder</property>
+  <property name="hibernate.connection.username">mpfinderapp-rw</property>
+  <property name="hibernate.connection.password">c#D$7RyuwaO</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
   <mapping resource="person.hbm.xml"/>
   <mapping resource="note.hbm.xml"/>
  </session-factory>

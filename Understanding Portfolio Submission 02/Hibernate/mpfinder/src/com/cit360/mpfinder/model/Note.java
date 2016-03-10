@@ -1,4 +1,4 @@
-package com.mpfinder.model;
+package com.cit360.mpfinder.model;
 
 import java.util.Date;
 public class Note {
