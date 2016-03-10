@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping">
+<hibernate-mapping>
+ <class entity-name="com.cit360.mpfinder.model.Person" name="com.cit360.mpfinder.model.Person" table="person">
+  <id column="person_record_id" name="PersonRecordId" type="int">
+   <generator class="increment"/>
+  </id>
+  <property column="entry_date" generated="never" lazy="false"
+   name="EntryDate" type="date"/>
+  <property column="expiry_date" generated="never" lazy="false"
+   name="ExpiryDate" type="date"/>
+  <property column="author_name" generated="never" lazy="false"
+   name="AuthorName" type="string"/>
+  <property column="author_email" generated="never" lazy="false"
+   name="AuthorEmail" type="string"/>
+  <property column="author_phone" generated="never" lazy="false"
+   name="AuthorPhone" type="string"/>
+  <property column="source_name" generated="never" lazy="false"
+   name="SourceName" type="string"/>
+  <property column="source_date" generated="never" lazy="false"
+   name="SourceDate" type="date"/>
+  <property column="source_url" generated="never" lazy="false"
+   name="SourceUrl" type="string"/>
+  <property column="full_name" generated="never" lazy="false"
+   name="FullName" type="string"/>
+  <property column="given_name" generated="never" lazy="false"
+   name="GivenName" type="string"/>
+  <property column="family_name" generated="never" lazy="false"
+   name="FamilyName" type="string"/>
+  <property column="alternate_names" generated="never" lazy="false"
+   name="AlternateNames" type="string"/>
+  <property column="description" generated="never" lazy="false"
+   name="Description" type="string"/>
+  <property column="sex" generated="never" lazy="false" name="Sex" type="string"/>
+  <property column="date_of_birth" generated="never" lazy="false"
+   name="DateOfBirth" type="date"/>
+  <property column="age" generated="never" lazy="false" name="Age" type="int"/>
+  <property column="home_street" generated="never" lazy="false"
+   name="HomeStreet" type="string"/>
+  <property column="home_neighborhood" generated="never" lazy="false"
+   name="HomeNeighborhood" type="string"/>
+  <property column="home_city" generated="never" lazy="false"
+   name="HomeCity" type="string"/>
+  <property column="home_state" generated="never" lazy="false"
+   name="HomeState" type="string"/>
+  <property column="home_postal_code" generated="never" lazy="false"
+   name="HomePostalCode" type="string"/>
+  <property column="home_country" generated="never" lazy="false"
+   name="HomeCountry" type="string"/>
+  <property column="photo_url" generated="never" lazy="false"
+   name="PhotoUrl" type="string"/>
+  <property column="profile_url" generated="never" lazy="false"
+   name="ProfileUrl" type="string"/>
+ </class>
+</hibernate-mapping>
