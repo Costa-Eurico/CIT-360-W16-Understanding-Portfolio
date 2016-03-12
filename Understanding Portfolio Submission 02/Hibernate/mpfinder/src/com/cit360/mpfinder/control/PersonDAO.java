@@ -2,6 +2,10 @@ package com.cit360.mpfinder.control;
 
 import java.util.List;
 
+import org.hibernate.Criteria;
+import org.hibernate.Hibernate;
+import org.hibernate.criterion.Example;
+import org.hibernate.criterion.Order;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -22,7 +26,9 @@ public class PersonDAO{
 	    session.persist(person);//persisting the object  
 	    
 	    t.commit();//transaction is committed  
-	    session.close();  
+	    
+	    if(session != null && session.isOpen())
+			session.close();
 	}
 	
 	//updating a record in 
@@ -33,7 +39,9 @@ public class PersonDAO{
 	    session.saveOrUpdate(person);//persisting the object  
 	    
 	    session.flush();
-	    session.close(); 
+	    
+	    if(session != null && session.isOpen())
+			session.close();
 	}
 
 	//deleting a person record
@@ -46,14 +54,30 @@ public class PersonDAO{
 	    session.delete(person);//persisting the object  
 	    
 	    session.flush();
-	    session.close(); 
+	    
+	    if(session != null && session.isOpen())
+			session.close(); 
 	}
 	
-	public Person getPerson(int personRecordId)  throws HibernateException{
-		return null;
+	public Person getPerson(int personRecordId)  throws Exception{
+		//creating session object  
+	    Session session = MissingPersonFinder.getHibernateUtil().openSession();
+		
+		Person person = null;
+		person = session.load(Person.class, personRecordId);
+		Hibernate.initialize(person);
+		
+		if(session != null && session.isOpen())
+			session.close();
+		
+		return person;
 	}
 	
-	public List<Person> getPersons(String searchString)  throws HibernateException{
-		return null;
+	public List<Person> getPersons()  throws Exception{
+		Session session = MissingPersonFinder.getHibernateUtil().openSession();
+		
+		List<Person> persons = session.createCriteria(Person.class).addOrder(Order.asc("PersonRecordId")).list();
+
+		return persons;
 	}
 }

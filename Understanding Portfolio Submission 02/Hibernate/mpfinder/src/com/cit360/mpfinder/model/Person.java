@@ -1,8 +1,14 @@
 package com.cit360.mpfinder.model;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
 
 public class Person {
+	
 	private int person_record_id;
 	private Date entry_date;
 	private Date expiry_date;
@@ -28,6 +34,16 @@ public class Person {
 	private String home_country;
 	private String photo_url;
 	private String profile_url;
+	private List<Note> notes = new ArrayList<Note>(0); 
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "note")
+	public List<Note> getNotes() {
+		return this.notes;
+	}
+	
+	public void setNotes(List<Note> notes) {
+		this.notes = notes;
+	}
 	
 	public int getPersonRecordId() {
 		return person_record_id;
@@ -178,5 +194,18 @@ public class Person {
 	}
 	public void setProfileUrl(String profile_url) {
 		this.profile_url = profile_url;
+	}
+	
+	@Override
+	public String toString() {
+		return "Person [person_record_id=" + person_record_id + ", entry_date=" + entry_date + ", expiry_date="
+				+ expiry_date + ", author_name=" + author_name + ", author_email=" + author_email + ", author_phone="
+				+ author_phone + ", source_name=" + source_name + ", source_url=" + source_url + ", source_date="
+				+ source_date + ", full_name=" + full_name + ", given_name=" + given_name + ", family_name="
+				+ family_name + ", alternate_names=" + alternate_names + ", description=" + description + ", sex=" + sex
+				+ ", dob=" + dob + ", age=" + age + ", home_street=" + home_street + ", home_neighborhood="
+				+ home_neighborhood + ", home_city=" + home_city + ", home_state=" + home_state + ", home_postal_code="
+				+ home_postal_code + ", home_country=" + home_country + ", photo_url=" + photo_url + ", profile_url="
+				+ profile_url + "]";
 	}
 }

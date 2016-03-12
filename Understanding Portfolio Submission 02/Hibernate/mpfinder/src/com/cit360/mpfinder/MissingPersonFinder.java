@@ -2,6 +2,7 @@ package com.cit360.mpfinder;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.List;
 
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
@@ -35,11 +36,39 @@ public class MissingPersonFinder {
 	public static void main(String[] args) {
 		try{
 			//create person
+			System.out.println("------------------------------------------------------------------");
+			System.out.println("create a new person");
+			System.out.println("------------------------------------------------------------------");
 			createPerson();
 			//update person
+			System.out.println("\n------------------------------------------------------------------");
+			System.out.println("update a new person");
+			System.out.println("------------------------------------------------------------------");
 			updatePerson();
 			//delete person
+			System.out.println("\n------------------------------------------------------------------");
+			System.out.println("delete a person");
+			System.out.println("------------------------------------------------------------------");
 			deletePerson(3);
+			//get person
+			System.out.println("\n------------------------------------------------------------------");
+			System.out.println("get a person by id");
+			System.out.println("------------------------------------------------------------------");
+			Person person = getPerson(10);
+			if(person != null){
+				System.out.println("Retrieved Person: " + person.toString());
+			}
+			
+			System.out.println("\n------------------------------------------------------------------");
+			System.out.println("retrieve all persons");
+			System.out.println("------------------------------------------------------------------");
+			//get persons from database. Because of small number of records, I'm getting all records for simplicity's sake
+			List<Person> persons = getAllPersons();
+			if(persons != null){
+				for(Person p : persons){
+					System.out.println("Person [ " + p.getPersonRecordId() + " ]: " + p.getFullName());
+				}
+			}
 		}
 		catch(Exception e){
 			System.out.println("Unexpected exception: " + e.getMessage());
@@ -53,7 +82,6 @@ public class MissingPersonFinder {
 	    logger.debug("Starting to compose the mperson object.");
 	    
 	    Person mperson = new Person();  
-	    //mperson.setPersonRecordId(1);
 	    mperson.setFullName("Clarice Starling");
 	    mperson.setAlternateNames("Clarice");
 	    mperson.setAge(25);
@@ -150,5 +178,39 @@ public class MissingPersonFinder {
 	    	System.out.println(errMsg);
 	    	logger.error(errMsg);
 	    }
+	}
+	
+	//retrieve a person record
+	public static Person getPerson(int personRecordId) throws Exception{
+		Person person = null;
+		PersonDAO pd = new PersonDAO();
+		
+		try{
+			person = pd.getPerson(personRecordId);
+			
+		}
+		catch(Exception e){
+			errMsg = "There was a problem retrieving this person record [GETPERSON]: " + e.getMessage();
+	    	System.out.println(errMsg);
+	    	logger.error(errMsg);
+		}
+		return person;
+	}
+	
+	//retrieve all persons from database
+	public static List<Person> getAllPersons() throws Exception{
+		PersonDAO pd = new PersonDAO();
+		List<Person> persons = null;
+		
+		try{
+			persons = pd.getPersons(); 
+		}
+		catch(Exception e){
+			errMsg = "There was a problem fetching list of persons [GETPERSONS]: " + e.getMessage();
+	    	System.out.println(errMsg);
+	    	logger.error(errMsg);
+		}
+		return persons;
+		
 	}
 }
