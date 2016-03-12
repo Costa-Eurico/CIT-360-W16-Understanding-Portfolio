@@ -2,8 +2,7 @@
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
                                          "http://www.hibernate.org/dtd/hibernate-configuration">
 <hibernate-configuration>
- <session-factory>
-  <property name="hbm2ddl.auto">update</property>
+ <session-factory name="">
   <property name="hibernate.show_sql">true</property>
   <property name="hibernate.use_sql_comments">true</property>
   <property name="hibernate.format_sql">true</property>
@@ -14,6 +13,7 @@
   <property name="hibernate.connection.username">mpfinderapp-rw</property>
   <property name="hibernate.connection.password">c#D$7RyuwaO</property>
   <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="hibernate.packagesToScan">com.cit360.mpfinder.model</property>
   <mapping resource="person.hbm.xml"/>
   <mapping resource="note.hbm.xml"/>
  </session-factory>

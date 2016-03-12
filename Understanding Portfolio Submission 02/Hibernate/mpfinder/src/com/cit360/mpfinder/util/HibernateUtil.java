@@ -1,37 +1,35 @@
 package com.cit360.mpfinder.util;
 
+import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
+import org.hibernate.boot.Metadata;
+import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.cfg.Configuration;
 
-//Singleton pattern for handling an hibernate session
+//Lazy instantiation singleton pattern for handling an hibernate session
 
-public class HibernateUtil {
+public final class HibernateUtil {
 
-	private static HibernateUtil instance = null;
-	private static SessionFactory sessionFactory;
-	private static StandardServiceRegistry serviceRegistry; 
+	private static SessionFactory factory;
 	
-	private HibernateUtil(){
-		
-		//creating configuration object  
-		Configuration configuration = new Configuration();
-		configuration.configure("hibernate.cfg.xml");
-		serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
-		
-		//setup session factory object  
-		sessionFactory = configuration.buildSessionFactory(serviceRegistry);
+	private HibernateUtil(){	
+		//exists only to defeat instantiation
 	}
 	
-	public static HibernateUtil getInstance(){
-		if(instance == null){
-			instance = new HibernateUtil();
+	public static SessionFactory getSessionFactory() throws HibernateException{
+		if(factory == null){
+			synchronized(HibernateUtil.class){
+				try{
+					StandardServiceRegistry standardRegistry = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();
+		            Metadata metadata = new MetadataSources(standardRegistry).getMetadataBuilder().build();
+		            factory = metadata.getSessionFactoryBuilder().build();
+				}
+				catch(HibernateException e){
+					throw new HibernateException ("Error creating SessionFactory: " + e.getMessage());
+				}
+			}
 		}
-		return instance;
-	}
-	
-	public static SessionFactory getSessionFactory(){
-		return sessionFactory;
+		return factory;
 	}
 }
