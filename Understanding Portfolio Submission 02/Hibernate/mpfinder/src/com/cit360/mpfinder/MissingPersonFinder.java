@@ -1,5 +1,8 @@
 package com.cit360.mpfinder;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -40,24 +43,12 @@ public class MissingPersonFinder {
 			System.out.println("create a new person");
 			System.out.println("------------------------------------------------------------------");
 			createPerson();
+			
 			//update person
 			System.out.println("\n------------------------------------------------------------------");
 			System.out.println("update a new person");
 			System.out.println("------------------------------------------------------------------");
 			updatePerson();
-			//delete person
-			System.out.println("\n------------------------------------------------------------------");
-			System.out.println("delete a person");
-			System.out.println("------------------------------------------------------------------");
-			deletePerson(3);
-			//get person
-			System.out.println("\n------------------------------------------------------------------");
-			System.out.println("get a person by id");
-			System.out.println("------------------------------------------------------------------");
-			Person person = getPerson(10);
-			if(person != null){
-				System.out.println("Retrieved Person: " + person.toString());
-			}
 			
 			System.out.println("\n------------------------------------------------------------------");
 			System.out.println("retrieve all persons");
@@ -68,6 +59,21 @@ public class MissingPersonFinder {
 				for(Person p : persons){
 					System.out.println("Person [ " + p.getPersonRecordId() + " ]: " + p.getFullName());
 				}
+			}
+			
+			//delete person
+			System.out.println("\n------------------------------------------------------------------");
+			System.out.println("delete a person");
+			System.out.println("------------------------------------------------------------------");
+			deletePerson();
+			
+			//get person
+			System.out.println("\n------------------------------------------------------------------");
+			System.out.println("get a person by id");
+			System.out.println("------------------------------------------------------------------");
+			Person person = getPerson();
+			if(person != null){
+				System.out.println("Retrieved Person: " + person.toString());
 			}
 		}
 		catch(Exception e){
@@ -164,31 +170,30 @@ public class MissingPersonFinder {
 	    }
 	}
 	
-	//Delete a person record
-	public static void deletePerson(int personId) throws ParseException {
-	    PersonDAO pd = new PersonDAO();
-	    
-	    try{
-	    	pd.deletePerson(personId);
-
-	    	System.out.println("successfully deleted");
-	    }
-	    catch(Exception e){
-	    	errMsg = "There was a problem deleting this person record [DELETEPERSON]: " + e.getMessage();
-	    	System.out.println(errMsg);
-	    	logger.error(errMsg);
-	    }
-	}
 	
 	//retrieve a person record
-	public static Person getPerson(int personRecordId) throws Exception{
+	public static Person getPerson() throws Exception{
 		Person person = null;
 		PersonDAO pd = new PersonDAO();
 		
 		try{
-			person = pd.getPerson(personRecordId);
-			
-		}
+	    	//read user input
+	    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	    	System.out.print("Enter a Person Record Id from the list above to retrieve: ");
+	    	int personId = Integer.parseInt(br.readLine());
+	    	
+	    	//retrieve record the record
+	    	person = pd.getPerson(personId);
+	    	System.out.println("successfully retrieved!");
+	    }
+		catch(NumberFormatException nfe){
+            System.err.println("Invalid Format!");
+        }
+	    catch(IOException ie){
+	    	errMsg = "There was a problem reading your input: " + ie.getMessage();
+	    	System.out.println(errMsg);
+	    	logger.error(errMsg);
+	    }
 		catch(Exception e){
 			errMsg = "There was a problem retrieving this person record [GETPERSON]: " + e.getMessage();
 	    	System.out.println(errMsg);
@@ -213,4 +218,33 @@ public class MissingPersonFinder {
 		return persons;
 		
 	}
+	
+	//Delete a person record
+		public static void deletePerson() throws Exception {
+		    PersonDAO pd = new PersonDAO();
+		    
+		    try{
+		    	//read user input
+		    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		    	System.out.print("Enter a Person Record Id from the list above: ");
+		    	int personId = Integer.parseInt(br.readLine());
+		    	
+		    	//delete the record
+		    	pd.deletePerson(personId);
+		    	System.out.println("successfully deleted");
+		    }
+			catch(NumberFormatException nfe){
+	            System.err.println("Invalid Format!");
+	        }
+		    catch(IOException ie){
+		    	errMsg = "There was a problem reading your input: " + ie.getMessage();
+		    	System.out.println(errMsg);
+		    	logger.error(errMsg);
+		    }
+		    catch(Exception e){
+		    	errMsg = "There was a problem deleting this person record [DELETEPERSON]: " + e.getMessage();
+		    	System.out.println(errMsg);
+		    	logger.error(errMsg);
+		    }
+		}
 }
