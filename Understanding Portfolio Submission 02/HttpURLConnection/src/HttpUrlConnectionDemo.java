@@ -3,6 +3,7 @@
 import java.net.*;
 import java.io.*;
 import java.util.*;
+import org.json.JSONObject;
 
 public class HttpUrlConnectionDemo {
 
@@ -39,7 +40,21 @@ public class HttpUrlConnectionDemo {
 			while((line = reader.readLine()) != null) {
 			    result.append(line);
 			}
-			System.out.println("\nJSON Object\n\n" + result.toString());
+			
+			//Process output json object
+			JSONObject json = new JSONObject(result.toString());
+			JSONObject currObs = (JSONObject) json.get("current_observation");
+
+            String theOutput = "Weather\t\t\t: " + currObs.get("weather")
+                    + "\nTemperature\t\t: " + currObs.get("temperature_string")
+                    + "\nWindchill\t\t: " + currObs.get("feelslike_string")
+                    + "\nRelative Humidity\t: " + currObs.get("relative_humidity")
+                    + "\nWind\t\t\t: " + currObs.get("wind_string")
+                    + "\nPressure\t\t: " + currObs.get("pressure_mb");
+			
+			System.out.println("\nWeather Conditions:");
+			System.out.println("-------------------------------------------------");
+			System.out.println(theOutput);
 		}
 		catch(IOException e){
 			System.out.println("It seems that a network connection is not available, or some other error occured trying to access the provided url. "
