@@ -5,13 +5,18 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
 
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.cit360.mpfinder.control.PersonDAO;
+import com.cit360.mpfinder.model.Note;
 import com.cit360.mpfinder.model.Person;
 import com.cit360.mpfinder.util.HibernateUtil;
 
@@ -74,6 +79,13 @@ public class MissingPersonFinder {
 			Person person = getPerson();
 			if(person != null){
 				System.out.println("Retrieved Person: " + person.toString());
+				
+				Set personSet = person.getNotes();
+				Iterator i = personSet.iterator();
+				while(i.hasNext()){
+					Note note = (Note)i.next();
+					System.out.println("Note: " + note.toString());
+				}
 			}
 		}
 		catch(Exception e){

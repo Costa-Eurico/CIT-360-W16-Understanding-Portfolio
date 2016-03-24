@@ -53,5 +53,9 @@
    name="PhotoUrl" type="string"/>
   <property column="profile_url" generated="never" lazy="false"
    name="ProfileUrl" type="string"/>
+  <set cascade="all" lazy="false" name="notes" sort="unsorted">
+   <key column="person_record_id"/>
+   <one-to-many class="com.cit360.mpfinder.model.Note"/>
+  </set>
  </class>
 </hibernate-mapping>

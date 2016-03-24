@@ -8,8 +8,6 @@
   </id>
   <property column="person_record_id" generated="never" lazy="false"
    name="PersonRecordId" type="int"/>
-  <property column="linked_person_record_id" generated="never"
-   lazy="false" name="LinkedPersonRecordId" type="int"/>
   <property column="entry_date" generated="never" lazy="false"
    name="EntryDate" type="date"/>
   <property column="author_name" generated="never" lazy="false"
