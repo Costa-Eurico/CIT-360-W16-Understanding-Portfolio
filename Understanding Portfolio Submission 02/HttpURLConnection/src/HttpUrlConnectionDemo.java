@@ -22,15 +22,39 @@ public class HttpUrlConnectionDemo {
 			//display response message
 			System.out.println("Response message is -> " + httpCon.getResponseMessage());
 			
+			//************************
+			// Collection example using Map and Set
 			//get list of header fields and a set of the header keys
+			System.out.println("\nCollection Example using Map/Set:");
 			Map<String, List<String>> headerMap = httpCon.getHeaderFields();
 			Set<String> headerField = headerMap.keySet();
+			TreeMap<String, List<String>> headerVarTreeM = new TreeMap<String, List<String>>();
 			
 			System.out.println("Header details: ");
 			//display all header keys and values
 			for(String key : headerField) {
 				System.out.println("Key: " + key + " Value: " + headerMap.get(key));
+				// load treeMap
+				if(key != null){
+					headerVarTreeM.put(key, headerMap.get(key));
+				}
 			}
+			
+			//************************
+			// Collections example using TreeMap
+			System.out.println("\nCollection Example using TreeMap:");
+	        //add key-value pair to TreeMap
+	        System.out.println(headerVarTreeM);
+			
+	        //display the contents using an iterator
+	        /* Display content using Iterator*/
+	        Set set = headerVarTreeM.entrySet();
+	        Iterator iterator = set.iterator();
+	        while(iterator.hasNext()) {
+	           Map.Entry mentry = (Map.Entry)iterator.next();
+	           System.out.print("key is: "+ mentry.getKey() + " & Value is: ");
+	           System.out.println(mentry.getValue());
+	        }
 			
 			//read stream
 			InputStream in = httpCon.getInputStream();
