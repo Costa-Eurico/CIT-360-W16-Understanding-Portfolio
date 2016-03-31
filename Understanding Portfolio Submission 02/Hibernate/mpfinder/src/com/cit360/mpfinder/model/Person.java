@@ -1,10 +1,7 @@
 package com.cit360.mpfinder.model;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.Set;
-
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 
@@ -37,7 +34,7 @@ public class Person {
 	private String profile_url;
 	private Set<Note> notes; 
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "note")
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "note")
 	public Set<Note> getNotes() {
 		return this.notes;
 	}
