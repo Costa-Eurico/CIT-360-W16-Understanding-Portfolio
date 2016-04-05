@@ -3,30 +3,29 @@ package com.cit360.mpfinder;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
 
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.cit360.mpfinder.control.PersonDAO;
-import com.cit360.mpfinder.model.Note;
+import com.cit360.mpfinder.controller.Controller;
+import com.cit360.mpfinder.controller.PersonDAO;
 import com.cit360.mpfinder.model.Person;
 import com.cit360.mpfinder.util.HibernateUtil;
+import com.cit360.mpfinder.util.MPFinderProperties;
 
-public class MissingPersonFinder {
+public class MissingPersonFinderServer {
 
 	/**
 	 * @param args
 	 */
 	//initialize logger
-	private static Logger logger = LoggerFactory.getLogger(MissingPersonFinder.class.getName());
+	private static Logger logger = LoggerFactory.getLogger(MissingPersonFinderServer.class.getName());
 	private static String errMsg;
 	
 	public static Logger getLogger() {
@@ -34,109 +33,52 @@ public class MissingPersonFinder {
 	}
 
 	public static void setLogger(Logger logger) {
-		MissingPersonFinder.logger = logger;
+		MissingPersonFinderServer.logger = logger;
 	}
 
 	public static SessionFactory getHibernateUtil() throws Exception{
 		return HibernateUtil.getSessionFactory();
 	}
 
-	public static void main(String[] args) {
+	//main method: start the server.
+	// To listen to the port being used, in terminal do: lsof -n -i4TCP:4499 | grep LISTEN
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		boolean stopServer = false;
+		int portNumber = 0;
+		
+		//A port number is obtained from properties file "mpfinderserver.config.properties"
+		//Class MPFinderProperties is the class onto which the properties file is loaded using a singleton pattern.
 		try{
-			//create person
-			System.out.println("------------------------------------------------------------------");
-			System.out.println("create a new person");
-			System.out.println("------------------------------------------------------------------");
-			createPerson();
-			
-			//update person
-			System.out.println("\n------------------------------------------------------------------");
-			System.out.println("update a new person");
-			System.out.println("------------------------------------------------------------------");
-			updatePerson();
-			
-			System.out.println("\n------------------------------------------------------------------");
-			System.out.println("retrieve all persons");
-			System.out.println("------------------------------------------------------------------");
-			//get persons from database. Because of small number of records, I'm getting all records for simplicity's sake
-			List<Person> persons = getAllPersons();
-			if(persons != null){
-				for(Person p : persons){
-					System.out.println("Person [ " + p.getPersonRecordId() + " ]: " + p.getFullName());
-				}
-			}
-			
-			//delete person
-			System.out.println("\n------------------------------------------------------------------");
-			System.out.println("delete a person");
-			System.out.println("------------------------------------------------------------------");
-			deletePerson();
-			
-			//get person
-			System.out.println("\n------------------------------------------------------------------");
-			System.out.println("get a person by id");
-			System.out.println("------------------------------------------------------------------");
-			Person person = getPerson();
-			if(person != null){
-				System.out.println("Retrieved Person: " + person.toString());
-				
-				Set personSet = person.getNotes();
-				Iterator i = personSet.iterator();
-				while(i.hasNext()){
-					Note note = (Note)i.next();
-					System.out.println("Note: " + note.toString());
-				}
-			}
+			portNumber = Integer.parseInt(MPFinderProperties.getProperties().getProperty("server.port"));
 		}
-		catch(Exception e){
-			System.out.println("Unexpected exception: " + e.getMessage());
+		catch(NumberFormatException e){
+			String err = "Exception: A port number was not supplied or there was a problem obtaining one. Check your configuration.";
+			System.out.println(err);
+			MissingPersonFinderServer.getLogger().error(err);
+			System.exit(99);
+		}
+		
+		while(!stopServer){
+			try(ServerSocket serverSocket = new ServerSocket(portNumber);){
+				try{
+					System.out.println("The Missing Persons Finder Server is now accepting requests on port " + serverSocket.getLocalPort());
+					Socket clientS = serverSocket.accept();
+					System.out.println("Connected client: " + clientS.getInetAddress());
+					Controller coms = new Controller(clientS);
+					new Thread(coms).start();
+				}
+				catch(IOException e){
+					throw new IOException("Unexpected error while processing client requests", e);
+				}
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				System.out.println("Exception: " + e.getMessage());
+				MissingPersonFinderServer.getLogger().error("Exception ->" + e.getStackTrace());
+				stopServer = true;
+			}
 		}
 	}  
 	
-	public static void createPerson() throws Exception{
-		//format dates from string
-	    SimpleDateFormat format = new SimpleDateFormat("dd-MMM-yyyy");
-	    
-	    logger.debug("Starting to compose the mperson object.");
-	    
-	    Person mperson = new Person();  
-	    mperson.setFullName("Clarice Starling");
-	    mperson.setAlternateNames("Clarice");
-	    mperson.setAge(25);
-	    mperson.setAuthorEmail("ejcosta.byui@gmail.com");
-	    mperson.setAuthorName("Eurico Costa");
-	    mperson.setAuthorPhone("(801) 915-6813");
-	    mperson.setDescription("5'8, brown hair, slender. Was last seen with a man named Hanibal Lecter.");
-	    mperson.setDateOfBirth(format.parse("15-JAN-1991"));
-	    mperson.setEntryDate(format.parse("9-MAR-2016"));
-	    mperson.setExpiryDate(format.parse("9-SEP-2016"));
-	    mperson.setFamilyName("Starling");
-	    mperson.setGivenName("Clarice");
-	    mperson.setHomeCity("Hopewell");
-	    mperson.setHomeCountry("United States");
-	    mperson.setHomeNeighborhood("Cedar Creek");
-	    mperson.setHomePostalCode("75034");
-	    mperson.setHomeStreet("2345 Honeywell Dr");
-	    mperson.setSex("M");
-	    mperson.setSourceName("MissingPersonFinder.java");
-	    mperson.setSourceDate(format.parse("9-MAR-2016"));
-	    
-	    logger.debug("mperson object ->" + mperson.toString());
-	    
-	    PersonDAO pd = new PersonDAO();
-	    try{
-	    	pd.createPerson(mperson);
-	    	System.out.println("successfully saved");
-	    	
-	    	logger.debug("Successfully saved");
-	    }
-	    catch(Exception e){
-	    	errMsg = "There was a problem saving this person record [CREATEPERSON]: " + e.getMessage();
-	    	System.out.println(errMsg);
-	    	logger.error(errMsg);
-	    }
-	}
-
 	public static void updatePerson() throws ParseException{
 		//format dates from string
 	    SimpleDateFormat format = new SimpleDateFormat("dd-MMM-yyyy");

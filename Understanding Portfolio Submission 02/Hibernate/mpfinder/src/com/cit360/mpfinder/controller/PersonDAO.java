@@ -1,4 +1,4 @@
-package com.cit360.mpfinder.control;
+package com.cit360.mpfinder.controller;
 
 import java.util.Collections;
 import java.util.List;
@@ -8,7 +8,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
 
-import com.cit360.mpfinder.MissingPersonFinder;
+import com.cit360.mpfinder.MissingPersonFinderServer;
 import com.cit360.mpfinder.model.Person;
 
 public class PersonDAO{
@@ -16,7 +16,7 @@ public class PersonDAO{
 	//creating a new record using a transaction...
 	public void createPerson(Person person)  throws Exception{ 
 	    //creating session object  
-	    Session session = MissingPersonFinder.getHibernateUtil().openSession();
+	    Session session = MissingPersonFinderServer.getHibernateUtil().openSession();
 	      
 	    //creating transaction object  
 	    Transaction t = session.beginTransaction();  
@@ -32,7 +32,7 @@ public class PersonDAO{
 	//updating a record in 
 	public void updatePerson(Person person)  throws Exception{
 		//creating session object  
-	    Session session = MissingPersonFinder.getHibernateUtil().openSession();
+	    Session session = MissingPersonFinderServer.getHibernateUtil().openSession();
 
 	    session.saveOrUpdate(person);//persisting the object  
 	    
@@ -45,7 +45,7 @@ public class PersonDAO{
 	//deleting a person record
 	public void deletePerson(int personId)  throws Exception{
 		//creating session object  
-	    Session session = MissingPersonFinder.getHibernateUtil().openSession();
+	    Session session = MissingPersonFinderServer.getHibernateUtil().openSession();
 	      
 	    Person person = new Person();
 	    person.setPersonRecordId(personId);
@@ -59,7 +59,7 @@ public class PersonDAO{
 	
 	public Person getPerson(int personRecordId)  throws Exception{
 		//creating session object  
-	    Session session = MissingPersonFinder.getHibernateUtil().openSession();
+	    Session session = MissingPersonFinderServer.getHibernateUtil().openSession();
 		
 		Person person = null;
 		person = session.load(Person.class, personRecordId);
@@ -72,7 +72,7 @@ public class PersonDAO{
 	}
 	
 	public List<Person> getPersons()  throws Exception{
-		Session session = MissingPersonFinder.getHibernateUtil().openSession();
+		Session session = MissingPersonFinderServer.getHibernateUtil().openSession();
 		
 		//Collections.checkedList ensures that only objects of type Person.class are added to the generic List.
 		@SuppressWarnings("unchecked")
