@@ -1,7 +1,8 @@
 package com.cit360.mpfinder.server.junit;
 
 import static org.junit.Assert.*;
-import org.json.JSONObject;
+
+import org.json.JSONArray;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -9,15 +10,16 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.cit360.mpfinder.server.util.MPFinderProperties;
+import com.cit360.mpfinder.server.dao.*;
+import com.cit360.mpfinder.server.model.*;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.Socket;
-import java.net.UnknownHostException;
 import java.sql.Connection;
 import java.sql.Statement;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -25,9 +27,6 @@ import java.sql.SQLException;
 public class MissingPersonsFinderTests {
 	static Connection conn = null;
 	static Statement stmt = null;
-	
-	String hostname = "localhost";
-	int portNumber = 4497;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -69,57 +68,48 @@ public class MissingPersonsFinderTests {
 		}
 	}
 
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
 
 	@Test
-	public void CreatePersonTest() {
-		//create JSONObject
-		JSONObject json = new JSONObject();
+	public void CreatePersonTest() throws ParseException {
+		//This test creates a new person in the database (unique name) and 
+		//then retrieves the record to ensure that it was created successfully.
 		
-		json.put("fullName", "Cristina Costa");
-		json.put("alternateName", "Kita");
-		json.put("age", 46);
-		json.put("authorEmail", "ejcosta.byui@gmail.com");
-		json.put("authorName", "Eurico Costa");
-		json.put("authorPhone", "(801) 915-6851");
-		json.put("description", "5'5, brown hair, brown eyes, white, was wearing a blue shirt and dark blue skinny jeans when she disapeared.");
-		json.put("entryDate", "31-MAR-2016");
-		json.put("expiryDate", "01-OCT-2016");
-		json.put("familyName", "Costa");
-		json.put("givenName", "Cristina");
-		json.put("homeCity", "Marco de Canavezes");
-		json.put("homeCountry", "Portugal");
-		json.put("homeNeighborhood", "Grilo");
-		json.put("postalCode", "4510");
-		json.put("homeStreet", "Rua Maria Amalia Cyrne de Vasconcelos");
-		json.put("gender", "F");
-		json.put("sourceName", "Missing Person Finder");
-		json.put("sourceDate", "31-MAR-2016");
+		//NOTE - For this test to function, the the expected value needs to be changed for each 
+		// iteration in order to test for a unique value and its successful creation in the database.
 		
-		//create client
-		try (
-                Socket wSocket = new Socket(hostname, 4497);
-                PrintWriter out = new PrintWriter(wSocket.getOutputStream(), true);
-                BufferedReader in = new BufferedReader(new InputStreamReader(wSocket.getInputStream()));
-        ) {
-			//send person to server
-			out.write(json.toString());
-
-        } catch (UnknownHostException e) {
-            System.err.println("Don't know about host " + hostname);
-            System.exit(1);
-        } catch (IOException e) {
-            System.err.println("Couldn't get I/O for the connection to " + hostname + ". It seems the server is not running on port " + portNumber + ".");
-            System.exit(1);
-        }
+		String expectedValue = "Miguel Costa";
+		Person p = new Person();
+		//format dates from string
+	    SimpleDateFormat format = new SimpleDateFormat("dd-MMM-yyyy");
 		
-		String expectedValue = "Cristina Costa";
+		p.setFullName("Miguel Costa");
+	    p.setAlternateNames("Kita");
+	    p.setAge(47);
+	    p.setAuthorEmail("ejcosta.byui@gmail.com");
+	    p.setAuthorName("Eurico Costa");
+	    p.setAuthorPhone("(801) 915-6813");
+	    p.setDescription("5'6, brown hair, brown eyes, european complexion, last seen wearing a white blouse and blue jeans.");
+		p.setDateOfBirth(format.parse("08-APR-2016"));
+	    p.setEntryDate(format.parse("08-APR-2016"));
+	    p.setExpiryDate(format.parse("08-OCT-2016"));
+	    p.setFamilyName("Baldaia da Costa");
+	    p.setGivenName("Cristina");
+	    p.setHomeCity("Marco de Canavezes");
+	    p.setHomeCountry("Portugal");
+	    p.setHomeNeighborhood("Grilo");
+	    p.setHomePostalCode("4950");
+	    p.setHomeStreet("Rua Pulido Valente, 20 - 1o");
+	    p.setSex("F");
+	    p.setSourceName("MissingPersonFinder Application");
+	    p.setSourceDate(format.parse("08-APR-2016"));
+		
+	    PersonDAO pdao = new PersonDAO();
+	    
+	    try{
+	    	pdao.createPerson(p);
+	    }catch(Exception e){
+	    	fail("Failed with exception: " + e.getMessage());
+	    }
 		
 		//Retrieve value from database
 		try {
@@ -127,11 +117,11 @@ public class MissingPersonsFinderTests {
 
 			String sql;
 			sql = "select full_name from person ";			
-			sql += "where full_name = '" + json.getString("fullName")  + "';";
+			sql += "where full_name = '" + expectedValue + "';";
 
 			ResultSet rs = stmt.executeQuery(sql);
 			
-			//STEP 5: Extract data from result set
+			//Extract data from result set
 			String fullName="";
 			
 			while(rs.next()){
@@ -145,9 +135,46 @@ public class MissingPersonsFinderTests {
 			//STEP 6: Clean-up environment
 			rs.close();
 		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
+			fail("Received error from database: " + e.getMessage());
+		}	
 	}
+	
+	@Test
+	public void getPersonsTest() {
+		//This test retrieves a count of records from the database
+		//and then compares it to the number of records retrieved by the 
+		//getMissingPersons method. The number should match.
+		
+		int totalDbRows = 0;
+		
+		//Retrieve value from database
+		try {
+			stmt = conn.createStatement();
 
+			String sql;
+			sql = "select count(*) as totalRecords from person;";			
+
+			ResultSet rs = stmt.executeQuery(sql);
+			rs.next();
+			totalDbRows = rs.getInt("totalRecords");
+			
+			//Clean-up environment
+			rs.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}	
+		
+		PersonDAO personDao = new PersonDAO();
+		
+		try {
+			List<Person> persons = personDao.getPersons();
+			int totalReturnedPersons = persons.size();
+			
+			assertEquals(totalDbRows, totalReturnedPersons);
+			
+		} catch (Exception e) {
+			fail("Failed with exception: " + e.getMessage());
+		}
+	    
+	}
 }
