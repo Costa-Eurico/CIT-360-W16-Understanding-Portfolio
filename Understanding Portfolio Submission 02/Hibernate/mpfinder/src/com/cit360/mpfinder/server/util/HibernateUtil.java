@@ -1,4 +1,4 @@
-package com.cit360.mpfinder.util;
+package com.cit360.mpfinder.server.util;
 
 import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;

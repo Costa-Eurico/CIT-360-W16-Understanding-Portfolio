@@ -1,4 +1,4 @@
-package com.cit360.mpfinder.controller;
+package com.cit360.mpfinder.server.dao;
 
 import java.util.Collections;
 import java.util.List;
@@ -8,8 +8,8 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
 
-import com.cit360.mpfinder.MissingPersonFinderServer;
-import com.cit360.mpfinder.model.Person;
+import com.cit360.mpfinder.server.MissingPersonFinderServer;
+import com.cit360.mpfinder.server.model.Person;
 
 public class PersonDAO{
 	

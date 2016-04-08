@@ -1,4 +1,4 @@
-package com.cit360.mpfinder.controller;
+package com.cit360.mpfinder.server.controller;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -30,12 +30,6 @@ public class Controller implements Runnable {
 				String jsonStr = fromClient.readLine();
 				//convert JSON string into JSONObject
 				JSONObject jsonObj = new JSONObject(jsonStr);
-				//all objects should contain two keys: request and data
-				//request is a string that maps to a handler in HandlerMap
-				//data is JSONObject that is forwarded to the requested handler
-				//samples:
-				//{'request':'createDeck','data':{'deckName':'Addition'}}
-				//{'request':'createCard','data':{'deckName':'Addition','sideOne':'1+1','sideTwo':'2'}}
 				String request = jsonObj.getString("request");
 				JSONObject data = jsonObj.getJSONObject("data");
 				

@@ -1,4 +1,4 @@
-package com.cit360.mpfinder.controller;
+package com.cit360.mpfinder.server.controller;
 
 import org.json.JSONObject;
 

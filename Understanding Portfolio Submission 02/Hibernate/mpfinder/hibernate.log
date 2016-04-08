@@ -1,0 +1,1114 @@
+03:29:18,532 DEBUG MissingPersonFinderServer:20 - Starting to compose the mperson object.
+03:29:18,538 DEBUG MissingPersonFinderServer:53 - mperson object ->Person [person_record_id=0, entry_date=Fri Apr 08 00:00:00 PDT 2016, expiry_date=Sat Oct 08 00:00:00 PDT 2016, author_name=Eurico Costa, author_email=ejcosta.byui@gmail.com, author_phone=(801) 915-6813, source_name=MissingPersonFinder.java, source_url=null, source_date=Fri Apr 08 00:00:00 PDT 2016, full_name=Luisa Lima, given_name=Luisa, family_name=Lima, alternate_names=Luisa, description=5'8, brown hair, heavy set. Was last seen wearing a green skirt, white blouse, black shoes., sex=F, dob=Wed Jun 19 00:00:00 PDT 1968, age=47, home_street=Rua das Sardinhas, 3 Esq, home_neighborhood=Bairro dos Pescadores, home_city=Povoa do Varzim, home_state=null, home_postal_code=4850, home_country=Portugal, photo_url=null, profile_url=null]
+03:29:18,555 DEBUG logging:101 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+03:29:18,574 DEBUG IntegratorServiceImpl:46 - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+03:29:18,576 DEBUG IntegratorServiceImpl:46 - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+03:29:18,578 DEBUG IntegratorServiceImpl:46 - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+03:29:18,631  INFO Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+03:29:18,632  INFO Environment:213 - HHH000206: hibernate.properties not found
+03:29:18,633  INFO Environment:317 - HHH000021: Bytecode provider name : javassist
+03:29:18,651 DEBUG LocalXmlResourceResolver:57 - Interpreting public/system identifier : [-//Hibernate/Hibernate Configuration DTD 3.0//EN] - [http://www.hibernate.org/dtd/hibernate-configuration]
+03:29:18,651 DEBUG LocalXmlResourceResolver:85 - Recognized hibernate-configuration identifier; attempting to resolve on classpath under org/hibernate/
+03:29:18,654 DEBUG JaxbCfgProcessor:116 - cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+03:29:18,782 DEBUG ServiceBinding:68 - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+03:29:18,797 DEBUG RegionFactoryInitiator:88 - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+03:29:18,804  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+03:29:18,811 DEBUG LocalXmlResourceResolver:57 - Interpreting public/system identifier : [-//Hibernate/Hibernate Mapping DTD 3.0//EN] - [http://www.hibernate.org/dtd/hibernate-mapping]
+03:29:18,812 DEBUG LocalXmlResourceResolver:59 - Recognized hibernate-mapping identifier; attempting to resolve on classpath under org/hibernate/
+03:29:18,821 DEBUG MappingBinder:58 - Performing JAXB binding of hbm.xml document : Origin(name=person.hbm.xml,type=RESOURCE)
+03:29:19,271 DEBUG LocalXmlResourceResolver:57 - Interpreting public/system identifier : [-//Hibernate/Hibernate Mapping DTD 3.0//EN] - [http://www.hibernate.org/dtd/hibernate-mapping]
+03:29:19,271 DEBUG LocalXmlResourceResolver:59 - Recognized hibernate-mapping identifier; attempting to resolve on classpath under org/hibernate/
+03:29:19,275 DEBUG MappingBinder:58 - Performing JAXB binding of hbm.xml document : Origin(name=note.hbm.xml,type=RESOURCE)
+03:29:19,289 DEBUG BasicTypeRegistry:135 - Adding type registration boolean -> org.hibernate.type.BooleanType@534e5bc8
+03:29:19,289 DEBUG BasicTypeRegistry:135 - Adding type registration boolean -> org.hibernate.type.BooleanType@534e5bc8
+03:29:19,289 DEBUG BasicTypeRegistry:135 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@534e5bc8
+03:29:19,290 DEBUG BasicTypeRegistry:135 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@665aec50
+03:29:19,290 DEBUG BasicTypeRegistry:135 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@4f06cd56
+03:29:19,291 DEBUG BasicTypeRegistry:135 - Adding type registration yes_no -> org.hibernate.type.YesNoType@36818541
+03:29:19,291 DEBUG BasicTypeRegistry:135 - Adding type registration byte -> org.hibernate.type.ByteType@1395ec6c
+03:29:19,292 DEBUG BasicTypeRegistry:135 - Adding type registration byte -> org.hibernate.type.ByteType@1395ec6c
+03:29:19,292 DEBUG BasicTypeRegistry:135 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@1395ec6c
+03:29:19,292 DEBUG BasicTypeRegistry:135 - Adding type registration character -> org.hibernate.type.CharacterType@1781aba0
+03:29:19,292 DEBUG BasicTypeRegistry:135 - Adding type registration char -> org.hibernate.type.CharacterType@1781aba0
+03:29:19,293 DEBUG BasicTypeRegistry:135 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@1781aba0
+03:29:19,293 DEBUG BasicTypeRegistry:135 - Adding type registration short -> org.hibernate.type.ShortType@4b94e944
+03:29:19,293 DEBUG BasicTypeRegistry:135 - Adding type registration short -> org.hibernate.type.ShortType@4b94e944
+03:29:19,294 DEBUG BasicTypeRegistry:135 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@4b94e944
+03:29:19,294 DEBUG BasicTypeRegistry:135 - Adding type registration integer -> org.hibernate.type.IntegerType@7f46165
+03:29:19,294 DEBUG BasicTypeRegistry:135 - Adding type registration int -> org.hibernate.type.IntegerType@7f46165
+03:29:19,295 DEBUG BasicTypeRegistry:135 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@7f46165
+03:29:19,295 DEBUG BasicTypeRegistry:135 - Adding type registration long -> org.hibernate.type.LongType@4607a979
+03:29:19,295 DEBUG BasicTypeRegistry:135 - Adding type registration long -> org.hibernate.type.LongType@4607a979
+03:29:19,295 DEBUG BasicTypeRegistry:135 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@4607a979
+03:29:19,296 DEBUG BasicTypeRegistry:135 - Adding type registration float -> org.hibernate.type.FloatType@1dd09b21
+03:29:19,296 DEBUG BasicTypeRegistry:135 - Adding type registration float -> org.hibernate.type.FloatType@1dd09b21
+03:29:19,296 DEBUG BasicTypeRegistry:135 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@1dd09b21
+03:29:19,297 DEBUG BasicTypeRegistry:135 - Adding type registration double -> org.hibernate.type.DoubleType@499a2dd6
+03:29:19,297 DEBUG BasicTypeRegistry:135 - Adding type registration double -> org.hibernate.type.DoubleType@499a2dd6
+03:29:19,297 DEBUG BasicTypeRegistry:135 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@499a2dd6
+03:29:19,298 DEBUG BasicTypeRegistry:135 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@48945be5
+03:29:19,298 DEBUG BasicTypeRegistry:135 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@48945be5
+03:29:19,299 DEBUG BasicTypeRegistry:135 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@2d1b50bf
+03:29:19,299 DEBUG BasicTypeRegistry:135 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@2d1b50bf
+03:29:19,300 DEBUG BasicTypeRegistry:135 - Adding type registration string -> org.hibernate.type.StringType@34f16052
+03:29:19,300 DEBUG BasicTypeRegistry:135 - Adding type registration java.lang.String -> org.hibernate.type.StringType@34f16052
+03:29:19,300 DEBUG BasicTypeRegistry:135 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@2e18b9ce
+03:29:19,301 DEBUG BasicTypeRegistry:135 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@ccedc25
+03:29:19,301 DEBUG BasicTypeRegistry:135 - Adding type registration url -> org.hibernate.type.UrlType@8960552
+03:29:19,301 DEBUG BasicTypeRegistry:135 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@8960552
+03:29:19,302 DEBUG BasicTypeRegistry:135 - Adding type registration date -> org.hibernate.type.DateType@3e7523e
+03:29:19,302 DEBUG BasicTypeRegistry:135 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@3e7523e
+03:29:19,303 DEBUG BasicTypeRegistry:135 - Adding type registration time -> org.hibernate.type.TimeType@71fb946a
+03:29:19,303 DEBUG BasicTypeRegistry:135 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@71fb946a
+03:29:19,304 DEBUG BasicTypeRegistry:135 - Adding type registration timestamp -> org.hibernate.type.TimestampType@632deb62
+03:29:19,304 DEBUG BasicTypeRegistry:135 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@632deb62
+03:29:19,304 DEBUG BasicTypeRegistry:135 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@632deb62
+03:29:19,305 DEBUG BasicTypeRegistry:135 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@5ada1cb3
+03:29:19,306 DEBUG BasicTypeRegistry:135 - Adding type registration calendar -> org.hibernate.type.CalendarType@23ad97ea
+03:29:19,306 DEBUG BasicTypeRegistry:135 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@23ad97ea
+03:29:19,306 DEBUG BasicTypeRegistry:135 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@23ad97ea
+03:29:19,307 DEBUG BasicTypeRegistry:135 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@612cfccc
+03:29:19,307 DEBUG BasicTypeRegistry:135 - Adding type registration locale -> org.hibernate.type.LocaleType@44307157
+03:29:19,307 DEBUG BasicTypeRegistry:135 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@44307157
+03:29:19,308 DEBUG BasicTypeRegistry:135 - Adding type registration currency -> org.hibernate.type.CurrencyType@4217c8f8
+03:29:19,308 DEBUG BasicTypeRegistry:135 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@4217c8f8
+03:29:19,308 DEBUG BasicTypeRegistry:135 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@2ce444d5
+03:29:19,309 DEBUG BasicTypeRegistry:135 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@2ce444d5
+03:29:19,309 DEBUG BasicTypeRegistry:135 - Adding type registration class -> org.hibernate.type.ClassType@843cebd
+03:29:19,309 DEBUG BasicTypeRegistry:135 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@843cebd
+03:29:19,310 DEBUG BasicTypeRegistry:135 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@32ebf521
+03:29:19,312 DEBUG BasicTypeRegistry:135 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@32ebf521
+03:29:19,312 DEBUG BasicTypeRegistry:135 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@f27eb2e
+03:29:19,313 DEBUG BasicTypeRegistry:135 - Adding type registration binary -> org.hibernate.type.BinaryType@19848233
+03:29:19,313 DEBUG BasicTypeRegistry:135 - Adding type registration byte[] -> org.hibernate.type.BinaryType@19848233
+03:29:19,313 DEBUG BasicTypeRegistry:135 - Adding type registration [B -> org.hibernate.type.BinaryType@19848233
+03:29:19,314 DEBUG BasicTypeRegistry:135 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@385a64f9
+03:29:19,314 DEBUG BasicTypeRegistry:135 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@385a64f9
+03:29:19,314 DEBUG BasicTypeRegistry:135 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@385a64f9
+03:29:19,315 DEBUG BasicTypeRegistry:135 - Adding type registration image -> org.hibernate.type.ImageType@13f52e7e
+03:29:19,315 DEBUG BasicTypeRegistry:135 - Adding type registration characters -> org.hibernate.type.CharArrayType@704c2c92
+03:29:19,315 DEBUG BasicTypeRegistry:135 - Adding type registration char[] -> org.hibernate.type.CharArrayType@704c2c92
+03:29:19,315 DEBUG BasicTypeRegistry:135 - Adding type registration [C -> org.hibernate.type.CharArrayType@704c2c92
+03:29:19,316 DEBUG BasicTypeRegistry:135 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@282eec8c
+03:29:19,316 DEBUG BasicTypeRegistry:135 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@282eec8c
+03:29:19,316 DEBUG BasicTypeRegistry:135 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@282eec8c
+03:29:19,317 DEBUG BasicTypeRegistry:135 - Adding type registration text -> org.hibernate.type.TextType@2e0e8c25
+03:29:19,318 DEBUG BasicTypeRegistry:135 - Adding type registration ntext -> org.hibernate.type.NTextType@fa646a3
+03:29:19,320 DEBUG BasicTypeRegistry:135 - Adding type registration blob -> org.hibernate.type.BlobType@45b16fc3
+03:29:19,320 DEBUG BasicTypeRegistry:135 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@45b16fc3
+03:29:19,320 DEBUG BasicTypeRegistry:135 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@2bf5ed3a
+03:29:19,322 DEBUG BasicTypeRegistry:135 - Adding type registration clob -> org.hibernate.type.ClobType@5efdb514
+03:29:19,323 DEBUG BasicTypeRegistry:135 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@5efdb514
+03:29:19,324 DEBUG BasicTypeRegistry:135 - Adding type registration nclob -> org.hibernate.type.NClobType@12fca710
+03:29:19,324 DEBUG BasicTypeRegistry:135 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@12fca710
+03:29:19,325 DEBUG BasicTypeRegistry:135 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@152b0d3f
+03:29:19,325 DEBUG BasicTypeRegistry:135 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@3d646692
+03:29:19,326 DEBUG BasicTypeRegistry:135 - Adding type registration serializable -> org.hibernate.type.SerializableType@423b6411
+03:29:19,328 DEBUG BasicTypeRegistry:135 - Adding type registration object -> org.hibernate.type.ObjectType@332d79d1
+03:29:19,328 DEBUG BasicTypeRegistry:135 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@332d79d1
+03:29:19,328 DEBUG BasicTypeRegistry:135 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@1628a16d
+03:29:19,328 DEBUG BasicTypeRegistry:135 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@4e13a188
+03:29:19,328 DEBUG BasicTypeRegistry:135 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@378f55b0
+03:29:19,328 DEBUG BasicTypeRegistry:135 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@42bcc181
+03:29:19,328 DEBUG BasicTypeRegistry:135 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@114c2372
+03:29:19,328 DEBUG BasicTypeRegistry:135 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@4280cf32
+03:29:19,329 DEBUG BasicTypeRegistry:135 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@f6f3007
+03:29:19,329 DEBUG BasicTypeRegistry:135 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@2b7b58a2
+03:29:19,335  WARN connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+03:29:19,340  INFO connections:127 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://107.180.3.103:3306/mpfinder]
+03:29:19,340  INFO connections:133 - HHH10001001: Connection properties: {user=mpfinderapp-rw, password=c#D$7RyuwaO}
+03:29:19,340  INFO connections:141 - HHH10001003: Autocommit mode: false
+03:29:19,342 DEBUG DriverManagerConnectionProviderImpl:384 - Initializing Connection pool with 1 Connections
+03:29:19,342  INFO DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+03:29:20,263 DEBUG JdbcEnvironmentInitiator:72 - Database ->
+       name : MySQL
+    version : 5.5.45-cll-lve
+      major : 5
+      minor : 5
+03:29:20,264 DEBUG JdbcEnvironmentInitiator:83 - Driver ->
+       name : MySQL Connector Java
+    version : mysql-connector-java-5.1.38 ( Revision: fe541c166cec739c74cc727c5da96c1028b4834a )
+      major : 5
+      minor : 1
+03:29:20,264 DEBUG JdbcEnvironmentInitiator:389 - JDBC version : 4.0
+03:29:20,272  INFO Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+03:29:20,280 DEBUG StandardRefCursorSupport:170 - Unexpected error trying to gauge level of JDBC REF_CURSOR support : null
+03:29:20,295 DEBUG IdentifierHelperBuilder:117 - JDBC driver metadata reported database stores quoted identifiers in more than one case
+03:29:20,297 DEBUG IdentifierHelperBuilder:191 - IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [MIXED]; that will likely lead to problems in schema update and validation if using quoted identifiers
+03:29:20,386 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+03:29:20,387 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+03:29:20,387 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+03:29:20,387 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+03:29:20,387 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+03:29:20,388 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+03:29:20,388 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+03:29:20,389 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+03:29:20,389 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+03:29:20,389 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+03:29:20,390 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+03:29:20,390 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+03:29:20,390 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+03:29:20,391 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+03:29:20,423 DEBUG Namespace:47 - Created database namespace [logicalName=Name{catalog=null, schema=mpfinder}, physicalName=Name{catalog=null, schema=mpfinder}]
+03:29:20,437 DEBUG ModelBinder:230 - Mapping class: com.cit360.mpfinder.server.model.Person -> person
+03:29:20,441 DEBUG ModelBinder:2497 - Mapped property: PersonRecordId -> [person_record_id]
+03:29:20,441 DEBUG PrimaryKey:35 - Forcing column [person_record_id] to be non-null as it is part of the primary key for table [person]
+03:29:20,442 DEBUG ModelBinder:2497 - Mapped property: EntryDate -> [entry_date]
+03:29:20,442 DEBUG ModelBinder:2497 - Mapped property: ExpiryDate -> [expiry_date]
+03:29:20,442 DEBUG ModelBinder:2497 - Mapped property: AuthorName -> [author_name]
+03:29:20,442 DEBUG ModelBinder:2497 - Mapped property: AuthorEmail -> [author_email]
+03:29:20,442 DEBUG ModelBinder:2497 - Mapped property: AuthorPhone -> [author_phone]
+03:29:20,442 DEBUG ModelBinder:2497 - Mapped property: SourceName -> [source_name]
+03:29:20,442 DEBUG ModelBinder:2497 - Mapped property: SourceDate -> [source_date]
+03:29:20,443 DEBUG ModelBinder:2497 - Mapped property: SourceUrl -> [source_url]
+03:29:20,443 DEBUG ModelBinder:2497 - Mapped property: FullName -> [full_name]
+03:29:20,443 DEBUG ModelBinder:2497 - Mapped property: GivenName -> [given_name]
+03:29:20,443 DEBUG ModelBinder:2497 - Mapped property: FamilyName -> [family_name]
+03:29:20,443 DEBUG ModelBinder:2497 - Mapped property: AlternateNames -> [alternate_names]
+03:29:20,443 DEBUG ModelBinder:2497 - Mapped property: Description -> [description]
+03:29:20,443 DEBUG ModelBinder:2497 - Mapped property: Sex -> [sex]
+03:29:20,443 DEBUG ModelBinder:2497 - Mapped property: DateOfBirth -> [date_of_birth]
+03:29:20,443 DEBUG ModelBinder:2497 - Mapped property: Age -> [age]
+03:29:20,443 DEBUG ModelBinder:2497 - Mapped property: HomeStreet -> [home_street]
+03:29:20,443 DEBUG ModelBinder:2497 - Mapped property: HomeNeighborhood -> [home_neighborhood]
+03:29:20,443 DEBUG ModelBinder:2497 - Mapped property: HomeCity -> [home_city]
+03:29:20,444 DEBUG ModelBinder:2497 - Mapped property: HomeState -> [home_state]
+03:29:20,444 DEBUG ModelBinder:2497 - Mapped property: HomePostalCode -> [home_postal_code]
+03:29:20,444 DEBUG ModelBinder:2497 - Mapped property: HomeCountry -> [home_country]
+03:29:20,444 DEBUG ModelBinder:2497 - Mapped property: PhotoUrl -> [photo_url]
+03:29:20,444 DEBUG ModelBinder:2497 - Mapped property: ProfileUrl -> [profile_url]
+03:29:20,447 DEBUG ModelBinder:2497 - Mapped property: notes -> []
+03:29:20,447 DEBUG ModelBinder:230 - Mapping class: com.cit360.mpfinder.server.model.Note -> note
+03:29:20,448 DEBUG ModelBinder:2497 - Mapped property: NoteRecordId -> [note_record_id]
+03:29:20,448 DEBUG PrimaryKey:35 - Forcing column [note_record_id] to be non-null as it is part of the primary key for table [note]
+03:29:20,448 DEBUG ModelBinder:2497 - Mapped property: PersonRecordId -> [person_record_id]
+03:29:20,448 DEBUG ModelBinder:2497 - Mapped property: EntryDate -> [entry_date]
+03:29:20,448 DEBUG ModelBinder:2497 - Mapped property: AuthorName -> [author_name]
+03:29:20,448 DEBUG ModelBinder:2497 - Mapped property: AuthorEmail -> [author_email]
+03:29:20,448 DEBUG ModelBinder:2497 - Mapped property: AuthorPhone -> [author_phone]
+03:29:20,448 DEBUG ModelBinder:2497 - Mapped property: SourceData -> [source_data]
+03:29:20,448 DEBUG ModelBinder:2497 - Mapped property: AuthorMadeContact -> [author_made_contact]
+03:29:20,448 DEBUG ModelBinder:2497 - Mapped property: Status -> [status]
+03:29:20,449 DEBUG ModelBinder:2497 - Mapped property: EmailOfFoundPerson -> [email_of_found_person]
+03:29:20,449 DEBUG ModelBinder:2497 - Mapped property: PhoneOfFoundPerson -> [phone_of_found_person]
+03:29:20,449 DEBUG ModelBinder:2497 - Mapped property: LastKnownLocation -> [last_known_location]
+03:29:20,449 DEBUG ModelBinder:2497 - Mapped property: Text -> [text]
+03:29:20,449 DEBUG ModelBinder:2497 - Mapped property: PhotoUrl -> [photo_url]
+03:29:20,450 DEBUG ModelBinder:3221 - Mapping collection: com.cit360.mpfinder.server.model.Person.notes -> note
+03:29:20,452 DEBUG ModelBinder:3096 - Mapped collection : com.cit360.mpfinder.server.model.Person.notes
+03:29:20,452 DEBUG ModelBinder:3097 -    + table -> person
+03:29:20,452 DEBUG ModelBinder:3098 -    + key -> person_record_id
+03:29:20,452 DEBUG ModelBinder:3103 -    + one-to-many -> com.cit360.mpfinder.server.model.Note
+03:29:20,452 DEBUG InFlightMetadataCollectorImpl:1798 - Resolving reference to class: com.cit360.mpfinder.server.model.Person
+03:29:20,455 DEBUG InFlightMetadataCollectorImpl:1798 - Resolving reference to class: com.cit360.mpfinder.server.model.Person
+03:29:20,473 DEBUG SessionFactoryImpl:208 - Building session factory
+03:29:20,514 DEBUG Settings:69 - SessionFactory name : null
+03:29:20,514 DEBUG Settings:70 - Automatic flush during beforeCompletion(): disabled
+03:29:20,514 DEBUG Settings:71 - Automatic session close at end of transaction: disabled
+03:29:20,514 DEBUG Settings:73 - Statistics: disabled
+03:29:20,514 DEBUG Settings:75 - Deleted entity synthetic identifier rollback: disabled
+03:29:20,514 DEBUG Settings:76 - Default entity-mode: pojo
+03:29:20,514 DEBUG Settings:77 - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+03:29:20,514 DEBUG Settings:78 - Allow initialization of lazy state outside session : disabled
+03:29:20,514 DEBUG Settings:80 - Using BatchFetchStyle : LEGACY
+03:29:20,514 DEBUG Settings:81 - Default batch fetch size: -1
+03:29:20,514 DEBUG Settings:82 - Maximum outer join fetch depth: 2
+03:29:20,515 DEBUG Settings:83 - Default null ordering: NONE
+03:29:20,515 DEBUG Settings:84 - Order SQL updates by primary key: disabled
+03:29:20,515 DEBUG Settings:85 - Order SQL inserts for batching: disabled
+03:29:20,515 DEBUG Settings:87 - multi-tenancy strategy : NONE
+03:29:20,515 DEBUG Settings:89 - JTA Track by Thread: enabled
+03:29:20,515 DEBUG Settings:91 - Query language substitutions: {}
+03:29:20,515 DEBUG Settings:92 - JPA query language strict compliance: disabled
+03:29:20,515 DEBUG Settings:93 - Named query checking : enabled
+03:29:20,515 DEBUG Settings:95 - Second-level cache: enabled
+03:29:20,515 DEBUG Settings:96 - Second-level query cache: disabled
+03:29:20,515 DEBUG Settings:97 - Second-level query cache factory: org.hibernate.cache.internal.StandardQueryCacheFactory@5d4fd5ae
+03:29:20,515 DEBUG Settings:98 - Second-level cache region prefix: null
+03:29:20,515 DEBUG Settings:99 - Optimize second-level cache for minimal puts: disabled
+03:29:20,516 DEBUG Settings:100 - Structured second-level cache entries: disabled
+03:29:20,516 DEBUG Settings:101 - Second-level cache direct-reference entries: disabled
+03:29:20,516 DEBUG Settings:102 - Automatic eviction of collection cache: disabled
+03:29:20,516 DEBUG Settings:104 - JDBC batch size: 15
+03:29:20,516 DEBUG Settings:105 - JDBC batch updates for versioned data: enabled
+03:29:20,516 DEBUG Settings:106 - Scrollable result sets: enabled
+03:29:20,516 DEBUG Settings:107 - Wrap result sets: disabled
+03:29:20,516 DEBUG Settings:108 - JDBC3 getGeneratedKeys(): enabled
+03:29:20,516 DEBUG Settings:109 - JDBC result set fetch size: null
+03:29:20,517 DEBUG Settings:110 - Connection release mode: ON_CLOSE
+03:29:20,517 DEBUG Settings:111 - Generate SQL with comments: enabled
+03:29:20,541 DEBUG SessionFactoryImpl:253 - Session factory constructed with filter configurations : {}
+03:29:20,541 DEBUG SessionFactoryImpl:254 - Instantiating session factory with properties: {hibernate.connection.password=c#D$7RyuwaO, java.runtime.name=Java(TM) SE Runtime Environment, java.vm.version=25.51-b03, hibernate.default_schema=mpfinder, sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib, hibernate.connection.username=mpfinderapp-rw, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@94e0a64, gopherProxySet=false, java.vm.vendor=Oracle Corporation, java.vendor.url=http://java.oracle.com/, path.separator=:, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding.pkg=sun.io, sun.os.patch.level=unknown, user.country=US, sun.java.launcher=SUN_STANDARD, java.vm.specification.name=Java Virtual Machine Specification, user.dir=/Users/eucosta/Google Drive/BYUI/In-flight/CIT-360/understanding-repository-github-rep/Understanding Portfolio Submission 02/Hibernate/mpfinder, java.runtime.version=1.8.0_51-b16, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment, os.arch=x86_64, java.endorsed.dirs=/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/endorsed, java.io.tmpdir=/var/folders/7g/wc_nj_517c9_twl26gmts9sh0000gn/T/, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, os.name=Mac OS X, hibernate.default_entity_mode=pojo, sun.jnu.encoding=UTF-8, java.library.path=/Users/eucosta/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., hibernate.packagesToScan=com.cit360.mpfinder.model, java.class.version=52.0, java.specification.name=Java Platform API Specification, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.version=10.11.4, http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, user.home=/Users/eucosta, user.timezone=America/Los_Angeles, java.awt.printerjob=sun.lwawt.macosx.CPrinterJob, file.encoding=UTF-8, java.specification.version=1.8, hibernate.format_sql=true, hibernate.connection.driver_class=com.mysql.jdbc.Driver, user.name=eucosta, java.class.path=/Users/eucosta/Google Drive/BYUI/In-flight/CIT-360/understanding-repository-github-rep/Understanding Portfolio Submission 02/Hibernate/mpfinder/target/classes:/Users/eucosta/Google Drive/BYUI/In-flight/CIT-360/Toolset/mysql-connector-java-5.1.38/mysql-connector-java-5.1.38-bin.jar:/Users/eucosta/.p2/pool/plugins/org.junit_4.12.0.v201504281640/junit.jar:/Users/eucosta/.p2/pool/plugins/org.hamcrest.core_1.3.0.v201303031735.jar:/Users/eucosta/Google Drive/BYUI/In-flight/CIT-360/Toolset/json-20160212.jar:/Users/eucosta/.m2/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/eucosta/.m2/com/fasterxml/classmate/1.3.0/classmate-1.3.0.jar:/Users/eucosta/.m2/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/Users/eucosta/.m2/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar:/Users/eucosta/.m2/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar:/Users/eucosta/.m2/org/hibernate/common/hibernate-commons-annotations/5.0.1.Final/hibernate-commons-annotations-5.0.1.Final.jar:/Users/eucosta/.m2/org/hibernate/hibernate-core/5.1.0.Final/hibernate-core-5.1.0.Final.jar:/Users/eucosta/.m2/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar:/Users/eucosta/.m2/org/jboss/jandex/2.0.0.Final/jandex-2.0.0.Final.jar:/Users/eucosta/.m2/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar:/Users/eucosta/.m2/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/Users/eucosta/.m2/org/slf4j/slf4j-log4j12/1.7.18/slf4j-log4j12-1.7.18.jar:/Users/eucosta/.m2/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/eucosta/.m2/org/slf4j/slf4j-api/1.7.18/slf4j-api-1.7.18.jar, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true, hibernate.use_sql_comments=true, java.vm.specification.version=1.8, sun.arch.data.model=64, sun.java.command=com.cit360.mpfinder.server.MissingPersonFinderServer, java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre, hibernate.connection.url=jdbc:mysql://107.180.3.103:3306/mpfinder, hibernate.dialect=org.hibernate.dialect.MySQLDialect, user.language=en, java.specification.vendor=Oracle Corporation, awt.toolkit=sun.lwawt.macosx.LWCToolkit, java.vm.info=mixed mode, java.version=1.8.0_51, java.ext.dirs=/Users/eucosta/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java, sun.boot.class.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/classes, java.vendor=Oracle Corporation, file.separator=/, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, sun.io.unicode.encoding=UnicodeBig, sun.cpu.endian=little, socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16, ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, sun.cpu.isalist=}
+03:29:20,547 DEBUG JaccIntegrator:80 - Skipping JACC integration as it was not enabled
+03:29:20,566 DEBUG ClassLoaderAccessImpl:55 - Not known whether passed class name [com.cit360.mpfinder.server.model.Person] is safe
+03:29:20,567 DEBUG ClassLoaderAccessImpl:57 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.cit360.mpfinder.server.model.Person
+03:29:20,578 DEBUG ClassLoaderAccessImpl:55 - Not known whether passed class name [com.cit360.mpfinder.server.model.Person] is safe
+03:29:20,578 DEBUG ClassLoaderAccessImpl:57 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.cit360.mpfinder.server.model.Person
+03:29:20,649 DEBUG ClassLoaderAccessImpl:55 - Not known whether passed class name [com.cit360.mpfinder.server.model.Note] is safe
+03:29:20,649 DEBUG ClassLoaderAccessImpl:57 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.cit360.mpfinder.server.model.Note
+03:29:20,650 DEBUG ClassLoaderAccessImpl:55 - Not known whether passed class name [com.cit360.mpfinder.server.model.Note] is safe
+03:29:20,650 DEBUG ClassLoaderAccessImpl:57 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.cit360.mpfinder.server.model.Note
+03:29:20,660 DEBUG AbstractCollectionPersister:664 - Static SQL for collection: com.cit360.mpfinder.server.model.Person.notes
+03:29:20,661 DEBUG AbstractCollectionPersister:666 -  Row insert: /* create one-to-many row com.cit360.mpfinder.server.model.Person.notes */ update note set person_record_id=? where note_record_id=?
+03:29:20,661 DEBUG AbstractCollectionPersister:669 -  Row update: update note set  where note_record_id=?
+03:29:20,661 DEBUG AbstractCollectionPersister:672 -  Row delete: /* delete one-to-many row com.cit360.mpfinder.server.model.Person.notes */ update note set person_record_id=null where person_record_id=? and note_record_id=?
+03:29:20,661 DEBUG AbstractCollectionPersister:675 -  One-shot delete: /* delete one-to-many com.cit360.mpfinder.server.model.Person.notes */ update note set person_record_id=null where person_record_id=?
+03:29:20,664 DEBUG AbstractEntityPersister:3516 - Static SQL for entity: com.cit360.mpfinder.server.model.Person
+03:29:20,664 DEBUG AbstractEntityPersister:3521 -  Version select: /* get version com.cit360.mpfinder.server.model.Person */ select person_record_id from person where person_record_id =?
+03:29:20,664 DEBUG AbstractEntityPersister:3524 -  Snapshot select: /* get current state com.cit360.mpfinder.server.model.Person */ select person_.person_record_id, person_.entry_date as entry_da2_1_, person_.expiry_date as expiry_d3_1_, person_.author_name as author_n4_1_, person_.author_email as author_e5_1_, person_.author_phone as author_p6_1_, person_.source_name as source_n7_1_, person_.source_date as source_d8_1_, person_.source_url as source_u9_1_, person_.full_name as full_na10_1_, person_.given_name as given_n11_1_, person_.family_name as family_12_1_, person_.alternate_names as alterna13_1_, person_.description as descrip14_1_, person_.sex as sex15_1_, person_.date_of_birth as date_of16_1_, person_.age as age17_1_, person_.home_street as home_st18_1_, person_.home_neighborhood as home_ne19_1_, person_.home_city as home_ci20_1_, person_.home_state as home_st21_1_, person_.home_postal_code as home_po22_1_, person_.home_country as home_co23_1_, person_.photo_url as photo_u24_1_, person_.profile_url as profile25_1_ from person person_ where person_.person_record_id=?
+03:29:20,665 DEBUG AbstractEntityPersister:394 -  Insert 0: /* insert com.cit360.mpfinder.server.model.Person */ insert into person (entry_date, expiry_date, author_name, author_email, author_phone, source_name, source_date, source_url, full_name, given_name, family_name, alternate_names, description, sex, date_of_birth, age, home_street, home_neighborhood, home_city, home_state, home_postal_code, home_country, photo_url, profile_url, person_record_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+03:29:20,665 DEBUG AbstractEntityPersister:394 -  Update 0: /* update com.cit360.mpfinder.server.model.Person */ update person set entry_date=?, expiry_date=?, author_name=?, author_email=?, author_phone=?, source_name=?, source_date=?, source_url=?, full_name=?, given_name=?, family_name=?, alternate_names=?, description=?, sex=?, date_of_birth=?, age=?, home_street=?, home_neighborhood=?, home_city=?, home_state=?, home_postal_code=?, home_country=?, photo_url=?, profile_url=? where person_record_id=?
+03:29:20,665 DEBUG AbstractEntityPersister:394 -  Delete 0: /* delete com.cit360.mpfinder.server.model.Person */ delete from person where person_record_id=?
+03:29:20,678 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@78eb4769]
+03:29:20,679 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EntryDate
+03:29:20,679 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : ExpiryDate
+03:29:20,679 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorName
+03:29:20,679 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorEmail
+03:29:20,679 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorPhone
+03:29:20,679 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceName
+03:29:20,679 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceDate
+03:29:20,679 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceUrl
+03:29:20,679 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : FullName
+03:29:20,679 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : GivenName
+03:29:20,679 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : FamilyName
+03:29:20,680 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AlternateNames
+03:29:20,680 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Description
+03:29:20,680 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Sex
+03:29:20,680 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : DateOfBirth
+03:29:20,680 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Age
+03:29:20,680 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeStreet
+03:29:20,680 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeNeighborhood
+03:29:20,680 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeCity
+03:29:20,680 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeState
+03:29:20,680 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomePostalCode
+03:29:20,680 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeCountry
+03:29:20,680 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhotoUrl
+03:29:20,680 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : ProfileUrl
+03:29:20,680 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : notes
+03:29:20,683 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@64b2da5]
+03:29:20,683 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@42fb8f55]
+03:29:20,684 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+03:29:20,692 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+03:29:20,694 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.cit360.mpfinder.server.model.Person)
+    - Returns
+       - EntityReturnImpl(entity=com.cit360.mpfinder.server.model.Person, querySpaceUid=<gen:0>, path=com.cit360.mpfinder.server.model.Person)
+          - CollectionAttributeFetchImpl(collection=com.cit360.mpfinder.server.model.Person.notes, querySpaceUid=<gen:1>, path=com.cit360.mpfinder.server.model.Person.notes)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.cit360.mpfinder.server.model.Note, querySpaceUid=<gen:2>, path=com.cit360.mpfinder.server.model.Person.notes.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.cit360.mpfinder.server.model.Person)
+          - SQL table alias mapping - person0_
+          - alias suffix - 0_
+          - suffixed key columns - {person_r1_1_0_}
+
+03:29:20,695 DEBUG EntityLoader:128 - Static select for entity com.cit360.mpfinder.server.model.Person [NONE]: select person0_.person_record_id as person_r1_1_0_, person0_.entry_date as entry_da2_1_0_, person0_.expiry_date as expiry_d3_1_0_, person0_.author_name as author_n4_1_0_, person0_.author_email as author_e5_1_0_, person0_.author_phone as author_p6_1_0_, person0_.source_name as source_n7_1_0_, person0_.source_date as source_d8_1_0_, person0_.source_url as source_u9_1_0_, person0_.full_name as full_na10_1_0_, person0_.given_name as given_n11_1_0_, person0_.family_name as family_12_1_0_, person0_.alternate_names as alterna13_1_0_, person0_.description as descrip14_1_0_, person0_.sex as sex15_1_0_, person0_.date_of_birth as date_of16_1_0_, person0_.age as age17_1_0_, person0_.home_street as home_st18_1_0_, person0_.home_neighborhood as home_ne19_1_0_, person0_.home_city as home_ci20_1_0_, person0_.home_state as home_st21_1_0_, person0_.home_postal_code as home_po22_1_0_, person0_.home_country as home_co23_1_0_, person0_.photo_url as photo_u24_1_0_, person0_.profile_url as profile25_1_0_ from person person0_ where person0_.person_record_id=?
+03:29:20,695 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3cf79dc2]
+03:29:20,695 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EntryDate
+03:29:20,696 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : ExpiryDate
+03:29:20,696 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorName
+03:29:20,696 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorEmail
+03:29:20,696 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorPhone
+03:29:20,696 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceName
+03:29:20,696 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceDate
+03:29:20,696 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceUrl
+03:29:20,696 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : FullName
+03:29:20,696 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : GivenName
+03:29:20,696 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : FamilyName
+03:29:20,696 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AlternateNames
+03:29:20,696 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Description
+03:29:20,696 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Sex
+03:29:20,696 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : DateOfBirth
+03:29:20,696 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Age
+03:29:20,696 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeStreet
+03:29:20,696 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeNeighborhood
+03:29:20,696 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeCity
+03:29:20,697 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeState
+03:29:20,697 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomePostalCode
+03:29:20,697 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeCountry
+03:29:20,697 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhotoUrl
+03:29:20,697 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : ProfileUrl
+03:29:20,697 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : notes
+03:29:20,697 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@3402ffe]
+03:29:20,697 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1f1e90a3]
+03:29:20,697 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+03:29:20,697 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+03:29:20,697 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.cit360.mpfinder.server.model.Person)
+    - Returns
+       - EntityReturnImpl(entity=com.cit360.mpfinder.server.model.Person, querySpaceUid=<gen:0>, path=com.cit360.mpfinder.server.model.Person)
+          - CollectionAttributeFetchImpl(collection=com.cit360.mpfinder.server.model.Person.notes, querySpaceUid=<gen:1>, path=com.cit360.mpfinder.server.model.Person.notes)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.cit360.mpfinder.server.model.Note, querySpaceUid=<gen:2>, path=com.cit360.mpfinder.server.model.Person.notes.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.cit360.mpfinder.server.model.Person)
+          - SQL table alias mapping - person0_
+          - alias suffix - 0_
+          - suffixed key columns - {person_r1_1_0_}
+
+03:29:20,698 DEBUG EntityLoader:128 - Static select for entity com.cit360.mpfinder.server.model.Person [READ]: select person0_.person_record_id as person_r1_1_0_, person0_.entry_date as entry_da2_1_0_, person0_.expiry_date as expiry_d3_1_0_, person0_.author_name as author_n4_1_0_, person0_.author_email as author_e5_1_0_, person0_.author_phone as author_p6_1_0_, person0_.source_name as source_n7_1_0_, person0_.source_date as source_d8_1_0_, person0_.source_url as source_u9_1_0_, person0_.full_name as full_na10_1_0_, person0_.given_name as given_n11_1_0_, person0_.family_name as family_12_1_0_, person0_.alternate_names as alterna13_1_0_, person0_.description as descrip14_1_0_, person0_.sex as sex15_1_0_, person0_.date_of_birth as date_of16_1_0_, person0_.age as age17_1_0_, person0_.home_street as home_st18_1_0_, person0_.home_neighborhood as home_ne19_1_0_, person0_.home_city as home_ci20_1_0_, person0_.home_state as home_st21_1_0_, person0_.home_postal_code as home_po22_1_0_, person0_.home_country as home_co23_1_0_, person0_.photo_url as photo_u24_1_0_, person0_.profile_url as profile25_1_0_ from person person0_ where person0_.person_record_id=?
+03:29:20,698 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1f07070f]
+03:29:20,698 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EntryDate
+03:29:20,698 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : ExpiryDate
+03:29:20,698 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorName
+03:29:20,698 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorEmail
+03:29:20,698 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorPhone
+03:29:20,698 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceName
+03:29:20,698 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceDate
+03:29:20,698 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceUrl
+03:29:20,698 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : FullName
+03:29:20,698 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : GivenName
+03:29:20,698 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : FamilyName
+03:29:20,698 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AlternateNames
+03:29:20,699 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Description
+03:29:20,699 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Sex
+03:29:20,699 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : DateOfBirth
+03:29:20,699 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Age
+03:29:20,699 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeStreet
+03:29:20,699 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeNeighborhood
+03:29:20,699 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeCity
+03:29:20,699 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeState
+03:29:20,699 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomePostalCode
+03:29:20,699 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeCountry
+03:29:20,699 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhotoUrl
+03:29:20,699 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : ProfileUrl
+03:29:20,699 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : notes
+03:29:20,699 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@5c287f5]
+03:29:20,699 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6eb29466]
+03:29:20,699 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+03:29:20,700 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+03:29:20,700 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.cit360.mpfinder.server.model.Person)
+    - Returns
+       - EntityReturnImpl(entity=com.cit360.mpfinder.server.model.Person, querySpaceUid=<gen:0>, path=com.cit360.mpfinder.server.model.Person)
+          - CollectionAttributeFetchImpl(collection=com.cit360.mpfinder.server.model.Person.notes, querySpaceUid=<gen:1>, path=com.cit360.mpfinder.server.model.Person.notes)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.cit360.mpfinder.server.model.Note, querySpaceUid=<gen:2>, path=com.cit360.mpfinder.server.model.Person.notes.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.cit360.mpfinder.server.model.Person)
+          - SQL table alias mapping - person0_
+          - alias suffix - 0_
+          - suffixed key columns - {person_r1_1_0_}
+
+03:29:20,700 DEBUG EntityLoader:128 - Static select for entity com.cit360.mpfinder.server.model.Person [UPGRADE]: select person0_.person_record_id as person_r1_1_0_, person0_.entry_date as entry_da2_1_0_, person0_.expiry_date as expiry_d3_1_0_, person0_.author_name as author_n4_1_0_, person0_.author_email as author_e5_1_0_, person0_.author_phone as author_p6_1_0_, person0_.source_name as source_n7_1_0_, person0_.source_date as source_d8_1_0_, person0_.source_url as source_u9_1_0_, person0_.full_name as full_na10_1_0_, person0_.given_name as given_n11_1_0_, person0_.family_name as family_12_1_0_, person0_.alternate_names as alterna13_1_0_, person0_.description as descrip14_1_0_, person0_.sex as sex15_1_0_, person0_.date_of_birth as date_of16_1_0_, person0_.age as age17_1_0_, person0_.home_street as home_st18_1_0_, person0_.home_neighborhood as home_ne19_1_0_, person0_.home_city as home_ci20_1_0_, person0_.home_state as home_st21_1_0_, person0_.home_postal_code as home_po22_1_0_, person0_.home_country as home_co23_1_0_, person0_.photo_url as photo_u24_1_0_, person0_.profile_url as profile25_1_0_ from person person0_ where person0_.person_record_id=? for update
+03:29:20,700 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@49aac9c0]
+03:29:20,700 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EntryDate
+03:29:20,700 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : ExpiryDate
+03:29:20,700 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorName
+03:29:20,700 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorEmail
+03:29:20,700 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorPhone
+03:29:20,700 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceName
+03:29:20,700 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceDate
+03:29:20,701 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceUrl
+03:29:20,701 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : FullName
+03:29:20,701 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : GivenName
+03:29:20,701 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : FamilyName
+03:29:20,701 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AlternateNames
+03:29:20,701 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Description
+03:29:20,701 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Sex
+03:29:20,701 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : DateOfBirth
+03:29:20,701 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Age
+03:29:20,701 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeStreet
+03:29:20,701 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeNeighborhood
+03:29:20,701 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeCity
+03:29:20,701 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeState
+03:29:20,701 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomePostalCode
+03:29:20,701 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeCountry
+03:29:20,701 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhotoUrl
+03:29:20,701 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : ProfileUrl
+03:29:20,701 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : notes
+03:29:20,702 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@247cfd89]
+03:29:20,702 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5e174cc4]
+03:29:20,702 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+03:29:20,702 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+03:29:20,702 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.cit360.mpfinder.server.model.Person)
+    - Returns
+       - EntityReturnImpl(entity=com.cit360.mpfinder.server.model.Person, querySpaceUid=<gen:0>, path=com.cit360.mpfinder.server.model.Person)
+          - CollectionAttributeFetchImpl(collection=com.cit360.mpfinder.server.model.Person.notes, querySpaceUid=<gen:1>, path=com.cit360.mpfinder.server.model.Person.notes)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.cit360.mpfinder.server.model.Note, querySpaceUid=<gen:2>, path=com.cit360.mpfinder.server.model.Person.notes.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.cit360.mpfinder.server.model.Person)
+          - SQL table alias mapping - person0_
+          - alias suffix - 0_
+          - suffixed key columns - {person_r1_1_0_}
+
+03:29:20,702 DEBUG EntityLoader:128 - Static select for entity com.cit360.mpfinder.server.model.Person [UPGRADE_NOWAIT]: select person0_.person_record_id as person_r1_1_0_, person0_.entry_date as entry_da2_1_0_, person0_.expiry_date as expiry_d3_1_0_, person0_.author_name as author_n4_1_0_, person0_.author_email as author_e5_1_0_, person0_.author_phone as author_p6_1_0_, person0_.source_name as source_n7_1_0_, person0_.source_date as source_d8_1_0_, person0_.source_url as source_u9_1_0_, person0_.full_name as full_na10_1_0_, person0_.given_name as given_n11_1_0_, person0_.family_name as family_12_1_0_, person0_.alternate_names as alterna13_1_0_, person0_.description as descrip14_1_0_, person0_.sex as sex15_1_0_, person0_.date_of_birth as date_of16_1_0_, person0_.age as age17_1_0_, person0_.home_street as home_st18_1_0_, person0_.home_neighborhood as home_ne19_1_0_, person0_.home_city as home_ci20_1_0_, person0_.home_state as home_st21_1_0_, person0_.home_postal_code as home_po22_1_0_, person0_.home_country as home_co23_1_0_, person0_.photo_url as photo_u24_1_0_, person0_.profile_url as profile25_1_0_ from person person0_ where person0_.person_record_id=? for update
+03:29:20,702 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@416c6a0f]
+03:29:20,702 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EntryDate
+03:29:20,702 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : ExpiryDate
+03:29:20,703 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorName
+03:29:20,703 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorEmail
+03:29:20,703 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorPhone
+03:29:20,703 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceName
+03:29:20,703 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceDate
+03:29:20,703 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceUrl
+03:29:20,703 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : FullName
+03:29:20,703 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : GivenName
+03:29:20,703 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : FamilyName
+03:29:20,703 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AlternateNames
+03:29:20,703 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Description
+03:29:20,703 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Sex
+03:29:20,703 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : DateOfBirth
+03:29:20,703 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Age
+03:29:20,703 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeStreet
+03:29:20,703 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeNeighborhood
+03:29:20,704 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeCity
+03:29:20,704 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeState
+03:29:20,704 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomePostalCode
+03:29:20,704 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeCountry
+03:29:20,704 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhotoUrl
+03:29:20,704 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : ProfileUrl
+03:29:20,704 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : notes
+03:29:20,704 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@3654a77e]
+03:29:20,704 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@52c1ac1c]
+03:29:20,704 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+03:29:20,704 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+03:29:20,705 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.cit360.mpfinder.server.model.Person)
+    - Returns
+       - EntityReturnImpl(entity=com.cit360.mpfinder.server.model.Person, querySpaceUid=<gen:0>, path=com.cit360.mpfinder.server.model.Person)
+          - CollectionAttributeFetchImpl(collection=com.cit360.mpfinder.server.model.Person.notes, querySpaceUid=<gen:1>, path=com.cit360.mpfinder.server.model.Person.notes)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.cit360.mpfinder.server.model.Note, querySpaceUid=<gen:2>, path=com.cit360.mpfinder.server.model.Person.notes.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.cit360.mpfinder.server.model.Person)
+          - SQL table alias mapping - person0_
+          - alias suffix - 0_
+          - suffixed key columns - {person_r1_1_0_}
+
+03:29:20,705 DEBUG EntityLoader:128 - Static select for entity com.cit360.mpfinder.server.model.Person [UPGRADE_SKIPLOCKED]: select person0_.person_record_id as person_r1_1_0_, person0_.entry_date as entry_da2_1_0_, person0_.expiry_date as expiry_d3_1_0_, person0_.author_name as author_n4_1_0_, person0_.author_email as author_e5_1_0_, person0_.author_phone as author_p6_1_0_, person0_.source_name as source_n7_1_0_, person0_.source_date as source_d8_1_0_, person0_.source_url as source_u9_1_0_, person0_.full_name as full_na10_1_0_, person0_.given_name as given_n11_1_0_, person0_.family_name as family_12_1_0_, person0_.alternate_names as alterna13_1_0_, person0_.description as descrip14_1_0_, person0_.sex as sex15_1_0_, person0_.date_of_birth as date_of16_1_0_, person0_.age as age17_1_0_, person0_.home_street as home_st18_1_0_, person0_.home_neighborhood as home_ne19_1_0_, person0_.home_city as home_ci20_1_0_, person0_.home_state as home_st21_1_0_, person0_.home_postal_code as home_po22_1_0_, person0_.home_country as home_co23_1_0_, person0_.photo_url as photo_u24_1_0_, person0_.profile_url as profile25_1_0_ from person person0_ where person0_.person_record_id=? for update
+03:29:20,705 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@705f8859]
+03:29:20,705 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EntryDate
+03:29:20,705 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : ExpiryDate
+03:29:20,705 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorName
+03:29:20,705 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorEmail
+03:29:20,705 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorPhone
+03:29:20,705 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceName
+03:29:20,705 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceDate
+03:29:20,705 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceUrl
+03:29:20,705 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : FullName
+03:29:20,706 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : GivenName
+03:29:20,706 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : FamilyName
+03:29:20,706 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AlternateNames
+03:29:20,706 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Description
+03:29:20,706 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Sex
+03:29:20,706 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : DateOfBirth
+03:29:20,706 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Age
+03:29:20,706 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeStreet
+03:29:20,706 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeNeighborhood
+03:29:20,706 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeCity
+03:29:20,706 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeState
+03:29:20,706 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomePostalCode
+03:29:20,706 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeCountry
+03:29:20,706 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhotoUrl
+03:29:20,706 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : ProfileUrl
+03:29:20,706 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : notes
+03:29:20,706 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@2a0a452b]
+03:29:20,707 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@75f4bd3a]
+03:29:20,707 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+03:29:20,707 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+03:29:20,707 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.cit360.mpfinder.server.model.Person)
+    - Returns
+       - EntityReturnImpl(entity=com.cit360.mpfinder.server.model.Person, querySpaceUid=<gen:0>, path=com.cit360.mpfinder.server.model.Person)
+          - CollectionAttributeFetchImpl(collection=com.cit360.mpfinder.server.model.Person.notes, querySpaceUid=<gen:1>, path=com.cit360.mpfinder.server.model.Person.notes)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.cit360.mpfinder.server.model.Note, querySpaceUid=<gen:2>, path=com.cit360.mpfinder.server.model.Person.notes.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.cit360.mpfinder.server.model.Person)
+          - SQL table alias mapping - person0_
+          - alias suffix - 0_
+          - suffixed key columns - {person_r1_1_0_}
+
+03:29:20,707 DEBUG EntityLoader:128 - Static select for entity com.cit360.mpfinder.server.model.Person [FORCE]: select person0_.person_record_id as person_r1_1_0_, person0_.entry_date as entry_da2_1_0_, person0_.expiry_date as expiry_d3_1_0_, person0_.author_name as author_n4_1_0_, person0_.author_email as author_e5_1_0_, person0_.author_phone as author_p6_1_0_, person0_.source_name as source_n7_1_0_, person0_.source_date as source_d8_1_0_, person0_.source_url as source_u9_1_0_, person0_.full_name as full_na10_1_0_, person0_.given_name as given_n11_1_0_, person0_.family_name as family_12_1_0_, person0_.alternate_names as alterna13_1_0_, person0_.description as descrip14_1_0_, person0_.sex as sex15_1_0_, person0_.date_of_birth as date_of16_1_0_, person0_.age as age17_1_0_, person0_.home_street as home_st18_1_0_, person0_.home_neighborhood as home_ne19_1_0_, person0_.home_city as home_ci20_1_0_, person0_.home_state as home_st21_1_0_, person0_.home_postal_code as home_po22_1_0_, person0_.home_country as home_co23_1_0_, person0_.photo_url as photo_u24_1_0_, person0_.profile_url as profile25_1_0_ from person person0_ where person0_.person_record_id=? for update
+03:29:20,707 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@79e5fe9d]
+03:29:20,707 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EntryDate
+03:29:20,707 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : ExpiryDate
+03:29:20,707 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorName
+03:29:20,708 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorEmail
+03:29:20,708 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorPhone
+03:29:20,708 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceName
+03:29:20,708 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceDate
+03:29:20,708 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceUrl
+03:29:20,708 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : FullName
+03:29:20,708 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : GivenName
+03:29:20,708 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : FamilyName
+03:29:20,708 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AlternateNames
+03:29:20,708 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Description
+03:29:20,708 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Sex
+03:29:20,708 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : DateOfBirth
+03:29:20,708 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Age
+03:29:20,708 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeStreet
+03:29:20,708 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeNeighborhood
+03:29:20,708 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeCity
+03:29:20,708 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeState
+03:29:20,708 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomePostalCode
+03:29:20,708 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeCountry
+03:29:20,708 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhotoUrl
+03:29:20,709 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : ProfileUrl
+03:29:20,709 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : notes
+03:29:20,709 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@b13ecc8]
+03:29:20,709 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5b5e9dfd]
+03:29:20,709 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+03:29:20,709 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+03:29:20,709 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.cit360.mpfinder.server.model.Person)
+    - Returns
+       - EntityReturnImpl(entity=com.cit360.mpfinder.server.model.Person, querySpaceUid=<gen:0>, path=com.cit360.mpfinder.server.model.Person)
+          - CollectionAttributeFetchImpl(collection=com.cit360.mpfinder.server.model.Person.notes, querySpaceUid=<gen:1>, path=com.cit360.mpfinder.server.model.Person.notes)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.cit360.mpfinder.server.model.Note, querySpaceUid=<gen:2>, path=com.cit360.mpfinder.server.model.Person.notes.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.cit360.mpfinder.server.model.Person)
+          - SQL table alias mapping - person0_
+          - alias suffix - 0_
+          - suffixed key columns - {person_r1_1_0_}
+
+03:29:20,709 DEBUG EntityLoader:128 - Static select for entity com.cit360.mpfinder.server.model.Person [PESSIMISTIC_READ]: select person0_.person_record_id as person_r1_1_0_, person0_.entry_date as entry_da2_1_0_, person0_.expiry_date as expiry_d3_1_0_, person0_.author_name as author_n4_1_0_, person0_.author_email as author_e5_1_0_, person0_.author_phone as author_p6_1_0_, person0_.source_name as source_n7_1_0_, person0_.source_date as source_d8_1_0_, person0_.source_url as source_u9_1_0_, person0_.full_name as full_na10_1_0_, person0_.given_name as given_n11_1_0_, person0_.family_name as family_12_1_0_, person0_.alternate_names as alterna13_1_0_, person0_.description as descrip14_1_0_, person0_.sex as sex15_1_0_, person0_.date_of_birth as date_of16_1_0_, person0_.age as age17_1_0_, person0_.home_street as home_st18_1_0_, person0_.home_neighborhood as home_ne19_1_0_, person0_.home_city as home_ci20_1_0_, person0_.home_state as home_st21_1_0_, person0_.home_postal_code as home_po22_1_0_, person0_.home_country as home_co23_1_0_, person0_.photo_url as photo_u24_1_0_, person0_.profile_url as profile25_1_0_ from person person0_ where person0_.person_record_id=? lock in share mode
+03:29:20,709 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@d99911d]
+03:29:20,709 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EntryDate
+03:29:20,710 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : ExpiryDate
+03:29:20,710 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorName
+03:29:20,710 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorEmail
+03:29:20,710 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorPhone
+03:29:20,710 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceName
+03:29:20,710 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceDate
+03:29:20,710 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceUrl
+03:29:20,710 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : FullName
+03:29:20,710 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : GivenName
+03:29:20,710 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : FamilyName
+03:29:20,710 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AlternateNames
+03:29:20,710 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Description
+03:29:20,710 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Sex
+03:29:20,710 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : DateOfBirth
+03:29:20,710 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Age
+03:29:20,710 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeStreet
+03:29:20,710 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeNeighborhood
+03:29:20,710 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeCity
+03:29:20,711 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeState
+03:29:20,711 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomePostalCode
+03:29:20,711 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeCountry
+03:29:20,711 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhotoUrl
+03:29:20,711 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : ProfileUrl
+03:29:20,711 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : notes
+03:29:20,711 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@2c6106a9]
+03:29:20,711 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@37fd7ad]
+03:29:20,711 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+03:29:20,711 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+03:29:20,711 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.cit360.mpfinder.server.model.Person)
+    - Returns
+       - EntityReturnImpl(entity=com.cit360.mpfinder.server.model.Person, querySpaceUid=<gen:0>, path=com.cit360.mpfinder.server.model.Person)
+          - CollectionAttributeFetchImpl(collection=com.cit360.mpfinder.server.model.Person.notes, querySpaceUid=<gen:1>, path=com.cit360.mpfinder.server.model.Person.notes)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.cit360.mpfinder.server.model.Note, querySpaceUid=<gen:2>, path=com.cit360.mpfinder.server.model.Person.notes.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.cit360.mpfinder.server.model.Person)
+          - SQL table alias mapping - person0_
+          - alias suffix - 0_
+          - suffixed key columns - {person_r1_1_0_}
+
+03:29:20,712 DEBUG EntityLoader:128 - Static select for entity com.cit360.mpfinder.server.model.Person [PESSIMISTIC_WRITE]: select person0_.person_record_id as person_r1_1_0_, person0_.entry_date as entry_da2_1_0_, person0_.expiry_date as expiry_d3_1_0_, person0_.author_name as author_n4_1_0_, person0_.author_email as author_e5_1_0_, person0_.author_phone as author_p6_1_0_, person0_.source_name as source_n7_1_0_, person0_.source_date as source_d8_1_0_, person0_.source_url as source_u9_1_0_, person0_.full_name as full_na10_1_0_, person0_.given_name as given_n11_1_0_, person0_.family_name as family_12_1_0_, person0_.alternate_names as alterna13_1_0_, person0_.description as descrip14_1_0_, person0_.sex as sex15_1_0_, person0_.date_of_birth as date_of16_1_0_, person0_.age as age17_1_0_, person0_.home_street as home_st18_1_0_, person0_.home_neighborhood as home_ne19_1_0_, person0_.home_city as home_ci20_1_0_, person0_.home_state as home_st21_1_0_, person0_.home_postal_code as home_po22_1_0_, person0_.home_country as home_co23_1_0_, person0_.photo_url as photo_u24_1_0_, person0_.profile_url as profile25_1_0_ from person person0_ where person0_.person_record_id=? for update
+03:29:20,712 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@422fbfa6]
+03:29:20,712 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EntryDate
+03:29:20,712 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : ExpiryDate
+03:29:20,712 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorName
+03:29:20,712 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorEmail
+03:29:20,712 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorPhone
+03:29:20,712 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceName
+03:29:20,712 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceDate
+03:29:20,712 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceUrl
+03:29:20,712 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : FullName
+03:29:20,712 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : GivenName
+03:29:20,712 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : FamilyName
+03:29:20,713 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AlternateNames
+03:29:20,713 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Description
+03:29:20,713 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Sex
+03:29:20,713 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : DateOfBirth
+03:29:20,713 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Age
+03:29:20,713 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeStreet
+03:29:20,713 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeNeighborhood
+03:29:20,713 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeCity
+03:29:20,713 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeState
+03:29:20,713 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomePostalCode
+03:29:20,713 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeCountry
+03:29:20,713 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhotoUrl
+03:29:20,713 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : ProfileUrl
+03:29:20,713 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : notes
+03:29:20,713 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@58a7d463]
+03:29:20,713 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2598b265]
+03:29:20,714 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+03:29:20,714 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+03:29:20,714 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.cit360.mpfinder.server.model.Person)
+    - Returns
+       - EntityReturnImpl(entity=com.cit360.mpfinder.server.model.Person, querySpaceUid=<gen:0>, path=com.cit360.mpfinder.server.model.Person)
+          - CollectionAttributeFetchImpl(collection=com.cit360.mpfinder.server.model.Person.notes, querySpaceUid=<gen:1>, path=com.cit360.mpfinder.server.model.Person.notes)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.cit360.mpfinder.server.model.Note, querySpaceUid=<gen:2>, path=com.cit360.mpfinder.server.model.Person.notes.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.cit360.mpfinder.server.model.Person)
+          - SQL table alias mapping - person0_
+          - alias suffix - 0_
+          - suffixed key columns - {person_r1_1_0_}
+
+03:29:20,714 DEBUG EntityLoader:128 - Static select for entity com.cit360.mpfinder.server.model.Person [PESSIMISTIC_FORCE_INCREMENT]: select person0_.person_record_id as person_r1_1_0_, person0_.entry_date as entry_da2_1_0_, person0_.expiry_date as expiry_d3_1_0_, person0_.author_name as author_n4_1_0_, person0_.author_email as author_e5_1_0_, person0_.author_phone as author_p6_1_0_, person0_.source_name as source_n7_1_0_, person0_.source_date as source_d8_1_0_, person0_.source_url as source_u9_1_0_, person0_.full_name as full_na10_1_0_, person0_.given_name as given_n11_1_0_, person0_.family_name as family_12_1_0_, person0_.alternate_names as alterna13_1_0_, person0_.description as descrip14_1_0_, person0_.sex as sex15_1_0_, person0_.date_of_birth as date_of16_1_0_, person0_.age as age17_1_0_, person0_.home_street as home_st18_1_0_, person0_.home_neighborhood as home_ne19_1_0_, person0_.home_city as home_ci20_1_0_, person0_.home_state as home_st21_1_0_, person0_.home_postal_code as home_po22_1_0_, person0_.home_country as home_co23_1_0_, person0_.photo_url as photo_u24_1_0_, person0_.profile_url as profile25_1_0_ from person person0_ where person0_.person_record_id=? for update
+03:29:20,714 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1a75ebff]
+03:29:20,714 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EntryDate
+03:29:20,714 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : ExpiryDate
+03:29:20,714 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorName
+03:29:20,714 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorEmail
+03:29:20,714 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorPhone
+03:29:20,715 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceName
+03:29:20,715 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceDate
+03:29:20,715 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceUrl
+03:29:20,715 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : FullName
+03:29:20,715 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : GivenName
+03:29:20,715 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : FamilyName
+03:29:20,715 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AlternateNames
+03:29:20,715 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Description
+03:29:20,715 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Sex
+03:29:20,715 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : DateOfBirth
+03:29:20,715 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Age
+03:29:20,715 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeStreet
+03:29:20,715 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeNeighborhood
+03:29:20,715 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeCity
+03:29:20,715 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeState
+03:29:20,715 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomePostalCode
+03:29:20,715 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeCountry
+03:29:20,715 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhotoUrl
+03:29:20,715 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : ProfileUrl
+03:29:20,715 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : notes
+03:29:20,716 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@3e0ad5bc]
+03:29:20,716 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5ee14382]
+03:29:20,716 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+03:29:20,716 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+03:29:20,716 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.cit360.mpfinder.server.model.Person)
+    - Returns
+       - EntityReturnImpl(entity=com.cit360.mpfinder.server.model.Person, querySpaceUid=<gen:0>, path=com.cit360.mpfinder.server.model.Person)
+          - CollectionAttributeFetchImpl(collection=com.cit360.mpfinder.server.model.Person.notes, querySpaceUid=<gen:1>, path=com.cit360.mpfinder.server.model.Person.notes)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.cit360.mpfinder.server.model.Note, querySpaceUid=<gen:2>, path=com.cit360.mpfinder.server.model.Person.notes.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.cit360.mpfinder.server.model.Person)
+          - SQL table alias mapping - person0_
+          - alias suffix - 0_
+          - suffixed key columns - {person_r1_1_0_}
+
+03:29:20,716 DEBUG EntityLoader:128 - Static select for entity com.cit360.mpfinder.server.model.Person [OPTIMISTIC]: select person0_.person_record_id as person_r1_1_0_, person0_.entry_date as entry_da2_1_0_, person0_.expiry_date as expiry_d3_1_0_, person0_.author_name as author_n4_1_0_, person0_.author_email as author_e5_1_0_, person0_.author_phone as author_p6_1_0_, person0_.source_name as source_n7_1_0_, person0_.source_date as source_d8_1_0_, person0_.source_url as source_u9_1_0_, person0_.full_name as full_na10_1_0_, person0_.given_name as given_n11_1_0_, person0_.family_name as family_12_1_0_, person0_.alternate_names as alterna13_1_0_, person0_.description as descrip14_1_0_, person0_.sex as sex15_1_0_, person0_.date_of_birth as date_of16_1_0_, person0_.age as age17_1_0_, person0_.home_street as home_st18_1_0_, person0_.home_neighborhood as home_ne19_1_0_, person0_.home_city as home_ci20_1_0_, person0_.home_state as home_st21_1_0_, person0_.home_postal_code as home_po22_1_0_, person0_.home_country as home_co23_1_0_, person0_.photo_url as photo_u24_1_0_, person0_.profile_url as profile25_1_0_ from person person0_ where person0_.person_record_id=?
+03:29:20,716 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6b7e61b2]
+03:29:20,716 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EntryDate
+03:29:20,716 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : ExpiryDate
+03:29:20,716 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorName
+03:29:20,716 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorEmail
+03:29:20,717 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorPhone
+03:29:20,717 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceName
+03:29:20,717 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceDate
+03:29:20,717 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceUrl
+03:29:20,717 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : FullName
+03:29:20,717 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : GivenName
+03:29:20,717 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : FamilyName
+03:29:20,717 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AlternateNames
+03:29:20,717 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Description
+03:29:20,717 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Sex
+03:29:20,717 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : DateOfBirth
+03:29:20,717 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Age
+03:29:20,717 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeStreet
+03:29:20,717 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeNeighborhood
+03:29:20,717 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeCity
+03:29:20,717 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeState
+03:29:20,717 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomePostalCode
+03:29:20,717 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : HomeCountry
+03:29:20,717 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhotoUrl
+03:29:20,717 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : ProfileUrl
+03:29:20,718 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : notes
+03:29:20,718 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@1bf14e4b]
+03:29:20,718 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4fd8f3e4]
+03:29:20,718 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+03:29:20,718 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+03:29:20,718 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.cit360.mpfinder.server.model.Person)
+    - Returns
+       - EntityReturnImpl(entity=com.cit360.mpfinder.server.model.Person, querySpaceUid=<gen:0>, path=com.cit360.mpfinder.server.model.Person)
+          - CollectionAttributeFetchImpl(collection=com.cit360.mpfinder.server.model.Person.notes, querySpaceUid=<gen:1>, path=com.cit360.mpfinder.server.model.Person.notes)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.cit360.mpfinder.server.model.Note, querySpaceUid=<gen:2>, path=com.cit360.mpfinder.server.model.Person.notes.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.cit360.mpfinder.server.model.Person)
+          - SQL table alias mapping - person0_
+          - alias suffix - 0_
+          - suffixed key columns - {person_r1_1_0_}
+
+03:29:20,718 DEBUG EntityLoader:128 - Static select for entity com.cit360.mpfinder.server.model.Person [OPTIMISTIC_FORCE_INCREMENT]: select person0_.person_record_id as person_r1_1_0_, person0_.entry_date as entry_da2_1_0_, person0_.expiry_date as expiry_d3_1_0_, person0_.author_name as author_n4_1_0_, person0_.author_email as author_e5_1_0_, person0_.author_phone as author_p6_1_0_, person0_.source_name as source_n7_1_0_, person0_.source_date as source_d8_1_0_, person0_.source_url as source_u9_1_0_, person0_.full_name as full_na10_1_0_, person0_.given_name as given_n11_1_0_, person0_.family_name as family_12_1_0_, person0_.alternate_names as alterna13_1_0_, person0_.description as descrip14_1_0_, person0_.sex as sex15_1_0_, person0_.date_of_birth as date_of16_1_0_, person0_.age as age17_1_0_, person0_.home_street as home_st18_1_0_, person0_.home_neighborhood as home_ne19_1_0_, person0_.home_city as home_ci20_1_0_, person0_.home_state as home_st21_1_0_, person0_.home_postal_code as home_po22_1_0_, person0_.home_country as home_co23_1_0_, person0_.photo_url as photo_u24_1_0_, person0_.profile_url as profile25_1_0_ from person person0_ where person0_.person_record_id=?
+03:29:20,728 DEBUG Loader:38 - Static select for action ACTION_MERGE on entity com.cit360.mpfinder.server.model.Person: /* load com.cit360.mpfinder.server.model.Person */ select person0_.person_record_id as person_r1_1_1_, person0_.entry_date as entry_da2_1_1_, person0_.expiry_date as expiry_d3_1_1_, person0_.author_name as author_n4_1_1_, person0_.author_email as author_e5_1_1_, person0_.author_phone as author_p6_1_1_, person0_.source_name as source_n7_1_1_, person0_.source_date as source_d8_1_1_, person0_.source_url as source_u9_1_1_, person0_.full_name as full_na10_1_1_, person0_.given_name as given_n11_1_1_, person0_.family_name as family_12_1_1_, person0_.alternate_names as alterna13_1_1_, person0_.description as descrip14_1_1_, person0_.sex as sex15_1_1_, person0_.date_of_birth as date_of16_1_1_, person0_.age as age17_1_1_, person0_.home_street as home_st18_1_1_, person0_.home_neighborhood as home_ne19_1_1_, person0_.home_city as home_ci20_1_1_, person0_.home_state as home_st21_1_1_, person0_.home_postal_code as home_po22_1_1_, person0_.home_country as home_co23_1_1_, person0_.photo_url as photo_u24_1_1_, person0_.profile_url as profile25_1_1_, notes1_.person_record_id as person_r2_0_3_, notes1_.note_record_id as note_rec1_0_3_, notes1_.note_record_id as note_rec1_0_0_, notes1_.person_record_id as person_r2_0_0_, notes1_.entry_date as entry_da3_0_0_, notes1_.author_name as author_n4_0_0_, notes1_.author_email as author_e5_0_0_, notes1_.author_phone as author_p6_0_0_, notes1_.source_data as source_d7_0_0_, notes1_.author_made_contact as author_m8_0_0_, notes1_.status as status9_0_0_, notes1_.email_of_found_person as email_o10_0_0_, notes1_.phone_of_found_person as phone_o11_0_0_, notes1_.last_known_location as last_kn12_0_0_, notes1_.text as text13_0_0_, notes1_.photo_url as photo_u14_0_0_ from person person0_ left outer join note notes1_ on person0_.person_record_id=notes1_.person_record_id where person0_.person_record_id=?
+03:29:20,729 DEBUG Loader:38 - Static select for action ACTION_REFRESH on entity com.cit360.mpfinder.server.model.Person: /* load com.cit360.mpfinder.server.model.Person */ select person0_.person_record_id as person_r1_1_1_, person0_.entry_date as entry_da2_1_1_, person0_.expiry_date as expiry_d3_1_1_, person0_.author_name as author_n4_1_1_, person0_.author_email as author_e5_1_1_, person0_.author_phone as author_p6_1_1_, person0_.source_name as source_n7_1_1_, person0_.source_date as source_d8_1_1_, person0_.source_url as source_u9_1_1_, person0_.full_name as full_na10_1_1_, person0_.given_name as given_n11_1_1_, person0_.family_name as family_12_1_1_, person0_.alternate_names as alterna13_1_1_, person0_.description as descrip14_1_1_, person0_.sex as sex15_1_1_, person0_.date_of_birth as date_of16_1_1_, person0_.age as age17_1_1_, person0_.home_street as home_st18_1_1_, person0_.home_neighborhood as home_ne19_1_1_, person0_.home_city as home_ci20_1_1_, person0_.home_state as home_st21_1_1_, person0_.home_postal_code as home_po22_1_1_, person0_.home_country as home_co23_1_1_, person0_.photo_url as photo_u24_1_1_, person0_.profile_url as profile25_1_1_, notes1_.person_record_id as person_r2_0_3_, notes1_.note_record_id as note_rec1_0_3_, notes1_.note_record_id as note_rec1_0_0_, notes1_.person_record_id as person_r2_0_0_, notes1_.entry_date as entry_da3_0_0_, notes1_.author_name as author_n4_0_0_, notes1_.author_email as author_e5_0_0_, notes1_.author_phone as author_p6_0_0_, notes1_.source_data as source_d7_0_0_, notes1_.author_made_contact as author_m8_0_0_, notes1_.status as status9_0_0_, notes1_.email_of_found_person as email_o10_0_0_, notes1_.phone_of_found_person as phone_o11_0_0_, notes1_.last_known_location as last_kn12_0_0_, notes1_.text as text13_0_0_, notes1_.photo_url as photo_u14_0_0_ from person person0_ left outer join note notes1_ on person0_.person_record_id=notes1_.person_record_id where person0_.person_record_id=?
+03:29:20,729 DEBUG AbstractEntityPersister:3516 - Static SQL for entity: com.cit360.mpfinder.server.model.Note
+03:29:20,729 DEBUG AbstractEntityPersister:3521 -  Version select: /* get version com.cit360.mpfinder.server.model.Note */ select note_record_id from note where note_record_id =?
+03:29:20,729 DEBUG AbstractEntityPersister:3524 -  Snapshot select: /* get current state com.cit360.mpfinder.server.model.Note */ select note_.note_record_id, note_.person_record_id as person_r2_0_, note_.entry_date as entry_da3_0_, note_.author_name as author_n4_0_, note_.author_email as author_e5_0_, note_.author_phone as author_p6_0_, note_.source_data as source_d7_0_, note_.author_made_contact as author_m8_0_, note_.status as status9_0_, note_.email_of_found_person as email_o10_0_, note_.phone_of_found_person as phone_o11_0_, note_.last_known_location as last_kn12_0_, note_.text as text13_0_, note_.photo_url as photo_u14_0_ from note note_ where note_.note_record_id=?
+03:29:20,729 DEBUG AbstractEntityPersister:394 -  Insert 0: /* insert com.cit360.mpfinder.server.model.Note */ insert into note (person_record_id, entry_date, author_name, author_email, author_phone, source_data, author_made_contact, status, email_of_found_person, phone_of_found_person, last_known_location, text, photo_url, note_record_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+03:29:20,729 DEBUG AbstractEntityPersister:394 -  Update 0: /* update com.cit360.mpfinder.server.model.Note */ update note set person_record_id=?, entry_date=?, author_name=?, author_email=?, author_phone=?, source_data=?, author_made_contact=?, status=?, email_of_found_person=?, phone_of_found_person=?, last_known_location=?, text=?, photo_url=? where note_record_id=?
+03:29:20,729 DEBUG AbstractEntityPersister:394 -  Delete 0: /* delete com.cit360.mpfinder.server.model.Note */ delete from note where note_record_id=?
+03:29:20,729 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5085a402]
+03:29:20,729 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PersonRecordId
+03:29:20,729 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EntryDate
+03:29:20,730 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorName
+03:29:20,730 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorEmail
+03:29:20,730 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorPhone
+03:29:20,730 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceData
+03:29:20,730 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorMadeContact
+03:29:20,730 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Status
+03:29:20,730 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EmailOfFoundPerson
+03:29:20,730 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhoneOfFoundPerson
+03:29:20,730 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : LastKnownLocation
+03:29:20,730 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Text
+03:29:20,730 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhotoUrl
+03:29:20,730 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+03:29:20,730 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+03:29:20,730 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.cit360.mpfinder.server.model.Note)
+    - Returns
+       - EntityReturnImpl(entity=com.cit360.mpfinder.server.model.Note, querySpaceUid=<gen:0>, path=com.cit360.mpfinder.server.model.Note)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.cit360.mpfinder.server.model.Note)
+          - SQL table alias mapping - note0_
+          - alias suffix - 0_
+          - suffixed key columns - {note_rec1_0_0_}
+
+03:29:20,731 DEBUG EntityLoader:128 - Static select for entity com.cit360.mpfinder.server.model.Note [NONE]: select note0_.note_record_id as note_rec1_0_0_, note0_.person_record_id as person_r2_0_0_, note0_.entry_date as entry_da3_0_0_, note0_.author_name as author_n4_0_0_, note0_.author_email as author_e5_0_0_, note0_.author_phone as author_p6_0_0_, note0_.source_data as source_d7_0_0_, note0_.author_made_contact as author_m8_0_0_, note0_.status as status9_0_0_, note0_.email_of_found_person as email_o10_0_0_, note0_.phone_of_found_person as phone_o11_0_0_, note0_.last_known_location as last_kn12_0_0_, note0_.text as text13_0_0_, note0_.photo_url as photo_u14_0_0_ from note note0_ where note0_.note_record_id=?
+03:29:20,731 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2b7ef5db]
+03:29:20,731 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PersonRecordId
+03:29:20,731 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EntryDate
+03:29:20,731 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorName
+03:29:20,731 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorEmail
+03:29:20,731 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorPhone
+03:29:20,731 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceData
+03:29:20,731 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorMadeContact
+03:29:20,731 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Status
+03:29:20,731 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EmailOfFoundPerson
+03:29:20,731 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhoneOfFoundPerson
+03:29:20,731 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : LastKnownLocation
+03:29:20,731 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Text
+03:29:20,731 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhotoUrl
+03:29:20,731 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+03:29:20,732 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+03:29:20,732 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.cit360.mpfinder.server.model.Note)
+    - Returns
+       - EntityReturnImpl(entity=com.cit360.mpfinder.server.model.Note, querySpaceUid=<gen:0>, path=com.cit360.mpfinder.server.model.Note)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.cit360.mpfinder.server.model.Note)
+          - SQL table alias mapping - note0_
+          - alias suffix - 0_
+          - suffixed key columns - {note_rec1_0_0_}
+
+03:29:20,732 DEBUG EntityLoader:128 - Static select for entity com.cit360.mpfinder.server.model.Note [READ]: select note0_.note_record_id as note_rec1_0_0_, note0_.person_record_id as person_r2_0_0_, note0_.entry_date as entry_da3_0_0_, note0_.author_name as author_n4_0_0_, note0_.author_email as author_e5_0_0_, note0_.author_phone as author_p6_0_0_, note0_.source_data as source_d7_0_0_, note0_.author_made_contact as author_m8_0_0_, note0_.status as status9_0_0_, note0_.email_of_found_person as email_o10_0_0_, note0_.phone_of_found_person as phone_o11_0_0_, note0_.last_known_location as last_kn12_0_0_, note0_.text as text13_0_0_, note0_.photo_url as photo_u14_0_0_ from note note0_ where note0_.note_record_id=?
+03:29:20,732 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1c7711f6]
+03:29:20,732 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PersonRecordId
+03:29:20,732 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EntryDate
+03:29:20,732 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorName
+03:29:20,732 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorEmail
+03:29:20,732 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorPhone
+03:29:20,732 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceData
+03:29:20,732 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorMadeContact
+03:29:20,732 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Status
+03:29:20,732 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EmailOfFoundPerson
+03:29:20,732 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhoneOfFoundPerson
+03:29:20,733 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : LastKnownLocation
+03:29:20,733 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Text
+03:29:20,733 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhotoUrl
+03:29:20,733 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+03:29:20,733 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+03:29:20,733 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.cit360.mpfinder.server.model.Note)
+    - Returns
+       - EntityReturnImpl(entity=com.cit360.mpfinder.server.model.Note, querySpaceUid=<gen:0>, path=com.cit360.mpfinder.server.model.Note)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.cit360.mpfinder.server.model.Note)
+          - SQL table alias mapping - note0_
+          - alias suffix - 0_
+          - suffixed key columns - {note_rec1_0_0_}
+
+03:29:20,733 DEBUG EntityLoader:128 - Static select for entity com.cit360.mpfinder.server.model.Note [UPGRADE]: select note0_.note_record_id as note_rec1_0_0_, note0_.person_record_id as person_r2_0_0_, note0_.entry_date as entry_da3_0_0_, note0_.author_name as author_n4_0_0_, note0_.author_email as author_e5_0_0_, note0_.author_phone as author_p6_0_0_, note0_.source_data as source_d7_0_0_, note0_.author_made_contact as author_m8_0_0_, note0_.status as status9_0_0_, note0_.email_of_found_person as email_o10_0_0_, note0_.phone_of_found_person as phone_o11_0_0_, note0_.last_known_location as last_kn12_0_0_, note0_.text as text13_0_0_, note0_.photo_url as photo_u14_0_0_ from note note0_ where note0_.note_record_id=? for update
+03:29:20,733 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1bc99f0e]
+03:29:20,733 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PersonRecordId
+03:29:20,733 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EntryDate
+03:29:20,733 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorName
+03:29:20,733 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorEmail
+03:29:20,733 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorPhone
+03:29:20,734 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceData
+03:29:20,734 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorMadeContact
+03:29:20,734 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Status
+03:29:20,734 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EmailOfFoundPerson
+03:29:20,734 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhoneOfFoundPerson
+03:29:20,734 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : LastKnownLocation
+03:29:20,734 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Text
+03:29:20,734 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhotoUrl
+03:29:20,734 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+03:29:20,734 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+03:29:20,734 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.cit360.mpfinder.server.model.Note)
+    - Returns
+       - EntityReturnImpl(entity=com.cit360.mpfinder.server.model.Note, querySpaceUid=<gen:0>, path=com.cit360.mpfinder.server.model.Note)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.cit360.mpfinder.server.model.Note)
+          - SQL table alias mapping - note0_
+          - alias suffix - 0_
+          - suffixed key columns - {note_rec1_0_0_}
+
+03:29:20,734 DEBUG EntityLoader:128 - Static select for entity com.cit360.mpfinder.server.model.Note [UPGRADE_NOWAIT]: select note0_.note_record_id as note_rec1_0_0_, note0_.person_record_id as person_r2_0_0_, note0_.entry_date as entry_da3_0_0_, note0_.author_name as author_n4_0_0_, note0_.author_email as author_e5_0_0_, note0_.author_phone as author_p6_0_0_, note0_.source_data as source_d7_0_0_, note0_.author_made_contact as author_m8_0_0_, note0_.status as status9_0_0_, note0_.email_of_found_person as email_o10_0_0_, note0_.phone_of_found_person as phone_o11_0_0_, note0_.last_known_location as last_kn12_0_0_, note0_.text as text13_0_0_, note0_.photo_url as photo_u14_0_0_ from note note0_ where note0_.note_record_id=? for update
+03:29:20,734 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@26c02d22]
+03:29:20,735 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PersonRecordId
+03:29:20,735 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EntryDate
+03:29:20,735 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorName
+03:29:20,735 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorEmail
+03:29:20,735 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorPhone
+03:29:20,735 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceData
+03:29:20,735 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorMadeContact
+03:29:20,735 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Status
+03:29:20,735 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EmailOfFoundPerson
+03:29:20,735 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhoneOfFoundPerson
+03:29:20,735 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : LastKnownLocation
+03:29:20,735 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Text
+03:29:20,735 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhotoUrl
+03:29:20,736 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+03:29:20,736 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+03:29:20,736 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.cit360.mpfinder.server.model.Note)
+    - Returns
+       - EntityReturnImpl(entity=com.cit360.mpfinder.server.model.Note, querySpaceUid=<gen:0>, path=com.cit360.mpfinder.server.model.Note)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.cit360.mpfinder.server.model.Note)
+          - SQL table alias mapping - note0_
+          - alias suffix - 0_
+          - suffixed key columns - {note_rec1_0_0_}
+
+03:29:20,736 DEBUG EntityLoader:128 - Static select for entity com.cit360.mpfinder.server.model.Note [UPGRADE_SKIPLOCKED]: select note0_.note_record_id as note_rec1_0_0_, note0_.person_record_id as person_r2_0_0_, note0_.entry_date as entry_da3_0_0_, note0_.author_name as author_n4_0_0_, note0_.author_email as author_e5_0_0_, note0_.author_phone as author_p6_0_0_, note0_.source_data as source_d7_0_0_, note0_.author_made_contact as author_m8_0_0_, note0_.status as status9_0_0_, note0_.email_of_found_person as email_o10_0_0_, note0_.phone_of_found_person as phone_o11_0_0_, note0_.last_known_location as last_kn12_0_0_, note0_.text as text13_0_0_, note0_.photo_url as photo_u14_0_0_ from note note0_ where note0_.note_record_id=? for update
+03:29:20,736 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7c037bef]
+03:29:20,736 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PersonRecordId
+03:29:20,736 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EntryDate
+03:29:20,736 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorName
+03:29:20,736 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorEmail
+03:29:20,736 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorPhone
+03:29:20,736 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceData
+03:29:20,736 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorMadeContact
+03:29:20,736 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Status
+03:29:20,736 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EmailOfFoundPerson
+03:29:20,736 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhoneOfFoundPerson
+03:29:20,736 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : LastKnownLocation
+03:29:20,737 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Text
+03:29:20,737 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhotoUrl
+03:29:20,737 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+03:29:20,737 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+03:29:20,737 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.cit360.mpfinder.server.model.Note)
+    - Returns
+       - EntityReturnImpl(entity=com.cit360.mpfinder.server.model.Note, querySpaceUid=<gen:0>, path=com.cit360.mpfinder.server.model.Note)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.cit360.mpfinder.server.model.Note)
+          - SQL table alias mapping - note0_
+          - alias suffix - 0_
+          - suffixed key columns - {note_rec1_0_0_}
+
+03:29:20,737 DEBUG EntityLoader:128 - Static select for entity com.cit360.mpfinder.server.model.Note [FORCE]: select note0_.note_record_id as note_rec1_0_0_, note0_.person_record_id as person_r2_0_0_, note0_.entry_date as entry_da3_0_0_, note0_.author_name as author_n4_0_0_, note0_.author_email as author_e5_0_0_, note0_.author_phone as author_p6_0_0_, note0_.source_data as source_d7_0_0_, note0_.author_made_contact as author_m8_0_0_, note0_.status as status9_0_0_, note0_.email_of_found_person as email_o10_0_0_, note0_.phone_of_found_person as phone_o11_0_0_, note0_.last_known_location as last_kn12_0_0_, note0_.text as text13_0_0_, note0_.photo_url as photo_u14_0_0_ from note note0_ where note0_.note_record_id=? for update
+03:29:20,737 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5f04b0c7]
+03:29:20,737 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PersonRecordId
+03:29:20,737 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EntryDate
+03:29:20,737 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorName
+03:29:20,737 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorEmail
+03:29:20,737 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorPhone
+03:29:20,737 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceData
+03:29:20,737 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorMadeContact
+03:29:20,737 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Status
+03:29:20,737 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EmailOfFoundPerson
+03:29:20,737 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhoneOfFoundPerson
+03:29:20,738 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : LastKnownLocation
+03:29:20,738 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Text
+03:29:20,738 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhotoUrl
+03:29:20,738 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+03:29:20,738 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+03:29:20,738 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.cit360.mpfinder.server.model.Note)
+    - Returns
+       - EntityReturnImpl(entity=com.cit360.mpfinder.server.model.Note, querySpaceUid=<gen:0>, path=com.cit360.mpfinder.server.model.Note)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.cit360.mpfinder.server.model.Note)
+          - SQL table alias mapping - note0_
+          - alias suffix - 0_
+          - suffixed key columns - {note_rec1_0_0_}
+
+03:29:20,738 DEBUG EntityLoader:128 - Static select for entity com.cit360.mpfinder.server.model.Note [PESSIMISTIC_READ]: select note0_.note_record_id as note_rec1_0_0_, note0_.person_record_id as person_r2_0_0_, note0_.entry_date as entry_da3_0_0_, note0_.author_name as author_n4_0_0_, note0_.author_email as author_e5_0_0_, note0_.author_phone as author_p6_0_0_, note0_.source_data as source_d7_0_0_, note0_.author_made_contact as author_m8_0_0_, note0_.status as status9_0_0_, note0_.email_of_found_person as email_o10_0_0_, note0_.phone_of_found_person as phone_o11_0_0_, note0_.last_known_location as last_kn12_0_0_, note0_.text as text13_0_0_, note0_.photo_url as photo_u14_0_0_ from note note0_ where note0_.note_record_id=? lock in share mode
+03:29:20,738 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5d0c140a]
+03:29:20,738 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PersonRecordId
+03:29:20,738 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EntryDate
+03:29:20,738 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorName
+03:29:20,738 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorEmail
+03:29:20,738 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorPhone
+03:29:20,738 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceData
+03:29:20,738 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorMadeContact
+03:29:20,738 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Status
+03:29:20,739 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EmailOfFoundPerson
+03:29:20,739 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhoneOfFoundPerson
+03:29:20,739 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : LastKnownLocation
+03:29:20,739 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Text
+03:29:20,739 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhotoUrl
+03:29:20,739 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+03:29:20,739 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+03:29:20,739 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.cit360.mpfinder.server.model.Note)
+    - Returns
+       - EntityReturnImpl(entity=com.cit360.mpfinder.server.model.Note, querySpaceUid=<gen:0>, path=com.cit360.mpfinder.server.model.Note)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.cit360.mpfinder.server.model.Note)
+          - SQL table alias mapping - note0_
+          - alias suffix - 0_
+          - suffixed key columns - {note_rec1_0_0_}
+
+03:29:20,739 DEBUG EntityLoader:128 - Static select for entity com.cit360.mpfinder.server.model.Note [PESSIMISTIC_WRITE]: select note0_.note_record_id as note_rec1_0_0_, note0_.person_record_id as person_r2_0_0_, note0_.entry_date as entry_da3_0_0_, note0_.author_name as author_n4_0_0_, note0_.author_email as author_e5_0_0_, note0_.author_phone as author_p6_0_0_, note0_.source_data as source_d7_0_0_, note0_.author_made_contact as author_m8_0_0_, note0_.status as status9_0_0_, note0_.email_of_found_person as email_o10_0_0_, note0_.phone_of_found_person as phone_o11_0_0_, note0_.last_known_location as last_kn12_0_0_, note0_.text as text13_0_0_, note0_.photo_url as photo_u14_0_0_ from note note0_ where note0_.note_record_id=? for update
+03:29:20,739 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@134ee6d2]
+03:29:20,739 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PersonRecordId
+03:29:20,739 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EntryDate
+03:29:20,739 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorName
+03:29:20,739 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorEmail
+03:29:20,739 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorPhone
+03:29:20,739 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceData
+03:29:20,739 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorMadeContact
+03:29:20,739 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Status
+03:29:20,740 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EmailOfFoundPerson
+03:29:20,740 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhoneOfFoundPerson
+03:29:20,740 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : LastKnownLocation
+03:29:20,740 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Text
+03:29:20,740 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhotoUrl
+03:29:20,740 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+03:29:20,740 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+03:29:20,740 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.cit360.mpfinder.server.model.Note)
+    - Returns
+       - EntityReturnImpl(entity=com.cit360.mpfinder.server.model.Note, querySpaceUid=<gen:0>, path=com.cit360.mpfinder.server.model.Note)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.cit360.mpfinder.server.model.Note)
+          - SQL table alias mapping - note0_
+          - alias suffix - 0_
+          - suffixed key columns - {note_rec1_0_0_}
+
+03:29:20,740 DEBUG EntityLoader:128 - Static select for entity com.cit360.mpfinder.server.model.Note [PESSIMISTIC_FORCE_INCREMENT]: select note0_.note_record_id as note_rec1_0_0_, note0_.person_record_id as person_r2_0_0_, note0_.entry_date as entry_da3_0_0_, note0_.author_name as author_n4_0_0_, note0_.author_email as author_e5_0_0_, note0_.author_phone as author_p6_0_0_, note0_.source_data as source_d7_0_0_, note0_.author_made_contact as author_m8_0_0_, note0_.status as status9_0_0_, note0_.email_of_found_person as email_o10_0_0_, note0_.phone_of_found_person as phone_o11_0_0_, note0_.last_known_location as last_kn12_0_0_, note0_.text as text13_0_0_, note0_.photo_url as photo_u14_0_0_ from note note0_ where note0_.note_record_id=? for update
+03:29:20,740 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2a09007a]
+03:29:20,740 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PersonRecordId
+03:29:20,740 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EntryDate
+03:29:20,740 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorName
+03:29:20,740 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorEmail
+03:29:20,741 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorPhone
+03:29:20,741 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceData
+03:29:20,741 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorMadeContact
+03:29:20,741 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Status
+03:29:20,741 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EmailOfFoundPerson
+03:29:20,741 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhoneOfFoundPerson
+03:29:20,741 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : LastKnownLocation
+03:29:20,741 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Text
+03:29:20,741 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhotoUrl
+03:29:20,741 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+03:29:20,741 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+03:29:20,741 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.cit360.mpfinder.server.model.Note)
+    - Returns
+       - EntityReturnImpl(entity=com.cit360.mpfinder.server.model.Note, querySpaceUid=<gen:0>, path=com.cit360.mpfinder.server.model.Note)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.cit360.mpfinder.server.model.Note)
+          - SQL table alias mapping - note0_
+          - alias suffix - 0_
+          - suffixed key columns - {note_rec1_0_0_}
+
+03:29:20,741 DEBUG EntityLoader:128 - Static select for entity com.cit360.mpfinder.server.model.Note [OPTIMISTIC]: select note0_.note_record_id as note_rec1_0_0_, note0_.person_record_id as person_r2_0_0_, note0_.entry_date as entry_da3_0_0_, note0_.author_name as author_n4_0_0_, note0_.author_email as author_e5_0_0_, note0_.author_phone as author_p6_0_0_, note0_.source_data as source_d7_0_0_, note0_.author_made_contact as author_m8_0_0_, note0_.status as status9_0_0_, note0_.email_of_found_person as email_o10_0_0_, note0_.phone_of_found_person as phone_o11_0_0_, note0_.last_known_location as last_kn12_0_0_, note0_.text as text13_0_0_, note0_.photo_url as photo_u14_0_0_ from note note0_ where note0_.note_record_id=?
+03:29:20,741 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@10701700]
+03:29:20,741 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PersonRecordId
+03:29:20,742 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EntryDate
+03:29:20,742 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorName
+03:29:20,742 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorEmail
+03:29:20,742 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorPhone
+03:29:20,742 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceData
+03:29:20,742 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorMadeContact
+03:29:20,742 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Status
+03:29:20,742 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EmailOfFoundPerson
+03:29:20,742 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhoneOfFoundPerson
+03:29:20,742 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : LastKnownLocation
+03:29:20,742 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Text
+03:29:20,742 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhotoUrl
+03:29:20,742 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+03:29:20,742 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+03:29:20,742 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.cit360.mpfinder.server.model.Note)
+    - Returns
+       - EntityReturnImpl(entity=com.cit360.mpfinder.server.model.Note, querySpaceUid=<gen:0>, path=com.cit360.mpfinder.server.model.Note)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.cit360.mpfinder.server.model.Note)
+          - SQL table alias mapping - note0_
+          - alias suffix - 0_
+          - suffixed key columns - {note_rec1_0_0_}
+
+03:29:20,742 DEBUG EntityLoader:128 - Static select for entity com.cit360.mpfinder.server.model.Note [OPTIMISTIC_FORCE_INCREMENT]: select note0_.note_record_id as note_rec1_0_0_, note0_.person_record_id as person_r2_0_0_, note0_.entry_date as entry_da3_0_0_, note0_.author_name as author_n4_0_0_, note0_.author_email as author_e5_0_0_, note0_.author_phone as author_p6_0_0_, note0_.source_data as source_d7_0_0_, note0_.author_made_contact as author_m8_0_0_, note0_.status as status9_0_0_, note0_.email_of_found_person as email_o10_0_0_, note0_.phone_of_found_person as phone_o11_0_0_, note0_.last_known_location as last_kn12_0_0_, note0_.text as text13_0_0_, note0_.photo_url as photo_u14_0_0_ from note note0_ where note0_.note_record_id=?
+03:29:20,743 DEBUG Loader:38 - Static select for action ACTION_MERGE on entity com.cit360.mpfinder.server.model.Note: /* load com.cit360.mpfinder.server.model.Note */ select note0_.note_record_id as note_rec1_0_0_, note0_.person_record_id as person_r2_0_0_, note0_.entry_date as entry_da3_0_0_, note0_.author_name as author_n4_0_0_, note0_.author_email as author_e5_0_0_, note0_.author_phone as author_p6_0_0_, note0_.source_data as source_d7_0_0_, note0_.author_made_contact as author_m8_0_0_, note0_.status as status9_0_0_, note0_.email_of_found_person as email_o10_0_0_, note0_.phone_of_found_person as phone_o11_0_0_, note0_.last_known_location as last_kn12_0_0_, note0_.text as text13_0_0_, note0_.photo_url as photo_u14_0_0_ from note note0_ where note0_.note_record_id=?
+03:29:20,743 DEBUG Loader:38 - Static select for action ACTION_REFRESH on entity com.cit360.mpfinder.server.model.Note: /* load com.cit360.mpfinder.server.model.Note */ select note0_.note_record_id as note_rec1_0_0_, note0_.person_record_id as person_r2_0_0_, note0_.entry_date as entry_da3_0_0_, note0_.author_name as author_n4_0_0_, note0_.author_email as author_e5_0_0_, note0_.author_phone as author_p6_0_0_, note0_.source_data as source_d7_0_0_, note0_.author_made_contact as author_m8_0_0_, note0_.status as status9_0_0_, note0_.email_of_found_person as email_o10_0_0_, note0_.phone_of_found_person as phone_o11_0_0_, note0_.last_known_location as last_kn12_0_0_, note0_.text as text13_0_0_, note0_.photo_url as photo_u14_0_0_ from note note0_ where note0_.note_record_id=?
+03:29:20,746 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@55b794d2]
+03:29:20,746 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3fb646b0]
+03:29:20,747 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PersonRecordId
+03:29:20,747 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EntryDate
+03:29:20,747 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorName
+03:29:20,747 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorEmail
+03:29:20,747 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorPhone
+03:29:20,747 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : SourceData
+03:29:20,747 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : AuthorMadeContact
+03:29:20,747 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Status
+03:29:20,747 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : EmailOfFoundPerson
+03:29:20,747 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhoneOfFoundPerson
+03:29:20,747 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : LastKnownLocation
+03:29:20,747 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : Text
+03:29:20,747 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : PhotoUrl
+03:29:20,747 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+03:29:20,748 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+03:29:20,749 DEBUG LoadPlanTreePrinter:55 - LoadPlan(collection=com.cit360.mpfinder.server.model.Person.notes)
+    - Returns
+       - CollectionReturnImpl(collection=com.cit360.mpfinder.server.model.Person.notes, querySpaceUid=<gen:0>, path=[com.cit360.mpfinder.server.model.Person.notes])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=com.cit360.mpfinder.server.model.Note, querySpaceUid=<gen:1>, path=[com.cit360.mpfinder.server.model.Person.notes].<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=com.cit360.mpfinder.server.model.Person.notes)
+          - SQL table alias mapping - notes0_
+          - alias suffix - 0_
+          - suffixed key columns - {person_r2_0_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - note_rec1_0_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.cit360.mpfinder.server.model.Note)
+                - SQL table alias mapping - notes0_
+                - alias suffix - 1_
+                - suffixed key columns - {note_rec1_0_1_}
+
+03:29:20,749 DEBUG CollectionLoader:96 - Static select for collection com.cit360.mpfinder.server.model.Person.notes: select notes0_.person_record_id as person_r2_0_0_, notes0_.note_record_id as note_rec1_0_0_, notes0_.note_record_id as note_rec1_0_1_, notes0_.person_record_id as person_r2_0_1_, notes0_.entry_date as entry_da3_0_1_, notes0_.author_name as author_n4_0_1_, notes0_.author_email as author_e5_0_1_, notes0_.author_phone as author_p6_0_1_, notes0_.source_data as source_d7_0_1_, notes0_.author_made_contact as author_m8_0_1_, notes0_.status as status9_0_1_, notes0_.email_of_found_person as email_o10_0_1_, notes0_.phone_of_found_person as phone_o11_0_1_, notes0_.last_known_location as last_kn12_0_1_, notes0_.text as text13_0_1_, notes0_.photo_url as photo_u14_0_1_ from note notes0_ where notes0_.person_record_id=?
+03:29:20,749 DEBUG SessionFactoryImpl:449 - Instantiated session factory
+03:29:20,751 DEBUG SchemaManagementToolCoordinator:53 - No actions specified; doing nothing
+03:29:20,752 DEBUG JtaPlatformInitiator:42 - No JtaPlatform was specified, checking resolver
+03:29:20,752 DEBUG JtaPlatformResolverInitiator:33 - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+03:29:20,753 DEBUG StandardJtaPlatformResolver:101 - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+03:29:20,754 DEBUG NamedQueryRepository:149 - Checking 0 named HQL queries
+03:29:20,754 DEBUG NamedQueryRepository:165 - Checking 0 named SQL queries
+03:29:20,755 DEBUG SessionFactoryRegistry:52 - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@3524d933
+03:29:20,756 DEBUG SessionFactoryRegistry:74 - Registering SessionFactory: d03a1778-8434-45e7-8252-9d808d46a8a5 ()
+03:29:20,756 DEBUG SessionFactoryRegistry:85 - Attempting to bind SessionFactory [] to JNDI
+03:29:20,757  WARN SessionFactoryRegistry:101 - HHH000277: Could not bind factory to JNDI
+org.hibernate.engine.jndi.JndiException: Error parsing JNDI name []
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:124)
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.bind(JndiServiceImpl.java:140)
+	at org.hibernate.internal.SessionFactoryRegistry.addSessionFactory(SessionFactoryRegistry.java:88)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:522)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:465)
+	at com.cit360.mpfinder.server.util.HibernateUtil.getSessionFactory(HibernateUtil.java:26)
+	at com.cit360.mpfinder.server.MissingPersonFinderServer.getHibernateUtil(MissingPersonFinderServer.java:40)
+	at com.cit360.mpfinder.server.dao.PersonDAO.createPerson(PersonDAO.java:19)
+	at com.cit360.mpfinder.server.controller.CreateMissingPersonHandler.handleIt(CreateMissingPersonHandler.java:58)
+	at com.cit360.mpfinder.server.controller.ApplicationController.handleRequest(ApplicationController.java:11)
+	at com.cit360.mpfinder.server.controller.Controller.run(Controller.java:38)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or as an applet parameter, or in an application resource file:  java.naming.factory.initial
+	at javax.naming.spi.NamingManager.getInitialContext(NamingManager.java:662)
+	at javax.naming.InitialContext.getDefaultInitCtx(InitialContext.java:313)
+	at javax.naming.InitialContext.getURLOrDefaultInitCtx(InitialContext.java:350)
+	at javax.naming.InitialContext.getNameParser(InitialContext.java:505)
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:118)
+	... 11 more
+03:29:20,786 DEBUG StatisticsInitiator:82 - Statistics initialized [enabled=false]
+03:29:20,786 DEBUG TransactionImpl:51 - begin
+03:29:20,914 DEBUG IncrementGenerator:108 - Fetching initial value: select max(person_record_id) from mpfinder.person
+03:29:20,917 DEBUG SQL:92 - 
+    select
+        max(person_record_id) 
+    from
+        mpfinder.person
+03:29:20,992 DEBUG IncrementGenerator:123 - First free id: 84
+03:29:20,992 DEBUG ResourceRegistryStandardImpl:73 - HHH000387: ResultSet's statement was not registered
+03:29:20,993 DEBUG AbstractSaveEventListener:118 - Generated identifier: 84, using strategy: org.hibernate.id.IncrementGenerator
+03:29:21,003 DEBUG TransactionImpl:62 - committing
+03:29:21,003 DEBUG AbstractFlushingEventListener:132 - Processing flush-time cascades
+03:29:21,004 DEBUG AbstractFlushingEventListener:174 - Dirty checking collections
+03:29:21,005 DEBUG AbstractFlushingEventListener:106 - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+03:29:21,005 DEBUG AbstractFlushingEventListener:113 - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+03:29:21,005 DEBUG EntityPrinter:102 - Listing entities:
+03:29:21,006 DEBUG EntityPrinter:109 - com.cit360.mpfinder.server.model.Person{ExpiryDate=Sat Oct 08 00:00:00 PDT 2016, SourceDate=Fri Apr 08 00:00:00 PDT 2016, SourceUrl=null, Description=5'8, brown hair, heavy set. Was last seen wearing a green skirt, white blouse, black shoes., notes=null, AuthorName=Eurico Costa, FamilyName=Lima, Sex=F, GivenName=Luisa, AuthorEmail=ejcosta.byui@gmail.com, AuthorPhone=(801) 915-6813, HomeState=null, PhotoUrl=null, HomeCity=Povoa do Varzim, Age=47, DateOfBirth=Wed Jun 19 00:00:00 PDT 1968, HomeStreet=Rua das Sardinhas, 3 Esq, HomeCountry=Portugal, HomeNeighborhood=Bairro dos Pescadores, SourceName=MissingPersonFinder.java, AlternateNames=Luisa, PersonRecordId=84, FullName=Luisa Lima, HomePostalCode=4850, EntryDate=Fri Apr 08 00:00:00 PDT 2016, ProfileUrl=null}
+03:29:21,009 DEBUG SQL:92 - 
+    /* insert com.cit360.mpfinder.server.model.Person
+        */ insert 
+        into
+            person
+            (entry_date, expiry_date, author_name, author_email, author_phone, source_name, source_date, source_url, full_name, given_name, family_name, alternate_names, description, sex, date_of_birth, age, home_street, home_neighborhood, home_city, home_state, home_postal_code, home_country, photo_url, profile_url, person_record_id) 
+        values
+            (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+03:29:21,134 DEBUG JdbcCoordinatorImpl:189 - HHH000420: Closing un-released batch
+03:29:50,203 DEBUG DriverManagerConnectionProviderImpl:49 - Connection pool now considered primed; min-size will be maintained

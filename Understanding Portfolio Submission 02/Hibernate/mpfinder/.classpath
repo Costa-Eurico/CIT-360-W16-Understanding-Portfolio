@@ -16,13 +16,13 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/eucosta/Google Drive/BYUI/In-flight/CIT-360/Toolset/mysql-connector-java-5.1.38/mysql-connector-java-5.1.38-bin.jar"/>
-	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+	<classpathentry exported="true" kind="lib" path="/Users/eucosta/Google Drive/BYUI/In-flight/CIT-360/Toolset/mysql-connector-java-5.1.38/mysql-connector-java-5.1.38-bin.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/eucosta/Google Drive/BYUI/In-flight/CIT-360/Team1-CIT360/Server/external_libs/json-20160212.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="/Users/eucosta/Google Drive/BYUI/In-flight/CIT-360/Toolset/json-20160212.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

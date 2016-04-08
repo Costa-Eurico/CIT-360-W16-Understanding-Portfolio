@@ -2,8 +2,8 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
                                    "http://www.hibernate.org/dtd/hibernate-mapping">
 <hibernate-mapping>
- <class entity-name="com.cit360.mpfinder.model.Person"
-  name="com.cit360.mpfinder.model.Person" table="person">
+ <class entity-name="com.cit360.mpfinder.server.model.Person"
+  name="com.cit360.mpfinder.server.model.Person" table="person">
   <id column="person_record_id" name="PersonRecordId" type="int">
    <generator class="increment"/>
   </id>
@@ -55,7 +55,7 @@
    name="ProfileUrl" type="string"/>
   <set cascade="all" lazy="false" name="notes" sort="unsorted">
    <key column="person_record_id"/>
-   <one-to-many class="com.cit360.mpfinder.model.Note"/>
+   <one-to-many class="com.cit360.mpfinder.server.model.Note"/>
   </set>
  </class>
 </hibernate-mapping>

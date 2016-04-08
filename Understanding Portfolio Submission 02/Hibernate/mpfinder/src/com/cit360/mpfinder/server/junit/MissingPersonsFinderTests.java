@@ -1,4 +1,4 @@
-package com.cit360.mpfinder.junit;
+package com.cit360.mpfinder.server.junit;
 
 import static org.junit.Assert.*;
 import org.json.JSONObject;
@@ -7,7 +7,9 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import com.cit360.mpfinder.util.MPFinderProperties;
+
+import com.cit360.mpfinder.server.util.MPFinderProperties;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

@@ -1,4 +1,4 @@
-package com.cit360.mpfinder.model;
+package com.cit360.mpfinder.server.model;
 
 import java.util.Date;
 import java.util.Set;

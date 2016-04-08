@@ -1,6 +1,7 @@
-package com.cit360.mpfinder.model;
+package com.cit360.mpfinder.server.model;
 
 import java.util.Date;
+
 public class Note {
 	private int note_record_id;
 	private int person_record_id;

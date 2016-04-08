@@ -2,7 +2,8 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
                                    "http://www.hibernate.org/dtd/hibernate-mapping">
 <hibernate-mapping>
- <class entity-name="com.cit360.mpfinder.model.Note" name="com.cit360.mpfinder.model.Note" table="note">
+ <class entity-name="com.cit360.mpfinder.server.model.Note"
+  name="com.cit360.mpfinder.server.model.Note" table="note">
   <id column="note_record_id" name="NoteRecordId" type="int">
    <generator class="increment"/>
   </id>
